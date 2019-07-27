@@ -3,10 +3,10 @@ $(document).ready(function(){
 
 
 
-var zipcode = '75223',
-var APIkey = b0b6044b52msh84991d47a52955ap1516e9jsnedb3635cb2ea;
+var zipcode = '75223'
+var APIkey = 'fb0ce6d825db30974bf096625bf170a2';
 
-var queryURL = 'https://community-open-weather-map.p.rapidapi.com/weather?zip='+zipcode+ ',us';
+var queryURL = 'https://api.openweathermap.org/data/2.5/weather?zip='+ zipcode + ',us&APPID=' + APIkey;
 
 
 $.ajax({
@@ -14,7 +14,7 @@ $.ajax({
     method: 'GET'
 
 }).then(function(weather){
-    console.log(weather.data)
+    console.log(weather.name)
 })
 
 
