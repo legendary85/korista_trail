@@ -30,19 +30,30 @@ $(document).ready(function () {
             console.log(weather)
 
             console.log(weather.name)
+            $('.cityplaceholder').text(weather.name)
 
             console.log(weather.main.temp)
+            $('.tempplaceholder').text(weather.main.temp)
+
 
             console.log(weather.weather[0].description)
+            $('.descplaceholder').text(weather.weather[0].description)
 
 
             console.log(weather.main.humidity)
+            $('.humidityPH').text(weather.main.humidity)
 
             console.log(weather.wind.speed)
+            $('.windPH').text(weather.wind.speed)
+
 
             console.log(weather.sys.sunrise)
+            $('.risePH').text(weather.sys.sunrise)
+
 
             console.log(weather.sys.sunset)
+            $('.setPH').text(weather.sys.sunset)
+
 
             
             console.log(weather.weather[0].description)
