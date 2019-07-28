@@ -6,3 +6,12 @@ body{
 .imagClass{
     width: 70%;
 }
+
+.jumbotron{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.281)), url('/assets/images/trailone.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+
+}

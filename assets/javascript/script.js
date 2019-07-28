@@ -6,7 +6,7 @@ $(document).ready(function () {
     $('.btn').on('click', function (check) {
         check.preventDefault()
 
-        $('.weather').show()
+     
 
 
         console.log('button works')
@@ -159,6 +159,9 @@ $(document).ready(function () {
 
                 $('.imageDiv').html(picDiv)
             })
+
+
+            $('.weather').show()
 
 
 
