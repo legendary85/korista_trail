@@ -8,7 +8,7 @@ $('.btn').on('click', function(check){
 
     console.log('button works')
 
-    var inputZip = $('.zipcode').val('')
+    var inputZip = $('#zip-code').val().trim()
     console.log(inputZip)
 })
 
