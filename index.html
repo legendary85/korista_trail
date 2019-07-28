@@ -15,7 +15,7 @@
     crossorigin="anonymous"></script>
   <title>Korista Trai</title>
 </head>
-
+<!-- Navbar -->
 <body>
   <nav id="top-nav" class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand" href="#">Kt</a>
@@ -41,6 +41,7 @@
     </div>
   </nav>
 
+<!-- Banner -->
   <div class="jumbotron">
     <div class="container">
       <div class="row">
@@ -57,23 +58,16 @@
         </div>
       </div>
     </div>
-
-  </div>
-  <div class="container">
-    <div class="row">
-        <form class="col-sm-3">
-            <label for="">Zip Code</label>
-            <input type="text" class="form-control" id="zip-code" placeholder=>
-            <br>
-            <button type="submit" id="zip-btn" class="btn btn-primary">Submit</button>
-          </div>
-        </form>
-      </div>
-    </div>
   </div>
 
-
-
+<!-- Search Bar -->
+  <nav class="navbar navbar-light bg-light">
+      <form class="form-inline">
+        <input id="zip-code" class="form-control mr-sm-2" type="search" placeholder="Enter zip code" aria-label="Search">
+        <button id="zip-btn" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </nav>
+<!--Weather and Trail area -->
   <div class="container">
       <div class="row">
         <div class="col-lg-6 mb-4">
@@ -94,12 +88,10 @@
     <br>
 
     <div class="container">
-
         <!-- Page Heading -->
         <h1 class="my-4">Page Heading
           <small>Secondary Text</small>
         </h1>
-      
         <div class="row">
           <div class="col-lg-6 mb-4">
             <div class="card h-100">
