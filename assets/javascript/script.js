@@ -30,7 +30,7 @@ $(document).ready(function () {
             console.log(weather)
 
             console.log(weather.name)
-            $('.cityplaceholder').text(weather.name)
+            $('.cityplaceholder ').text(weather.name)
 
             console.log(weather.main.temp)
             
