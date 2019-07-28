@@ -25,13 +25,32 @@ $(document).ready(function () {
 
         }).then(function (weather) {
 
+
+
             console.log(weather)
-            
+
             console.log(weather.name)
+
+            console.log(weather.main.temp)
+
+            console.log(weather.weather[0].description)
+
 
             console.log(weather.main.humidity)
 
-            console.log(weather.main.temp)
+            console.log(weather.wind.speed)
+
+            console.log(weather.sys.sunrise)
+
+            console.log(weather.sys.sunset)
+
+            
+            console.log(weather.weather[0].description)
+
+
+
+
+
 
 
 
