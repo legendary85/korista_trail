@@ -32,14 +32,18 @@ $(document).ready(function () {
             console.log(weather.name)
             $('.cityplaceholder ').text(weather.name)
 
+
+            // temperature///////////////////////
             console.log(weather.main.temp)
-            
+
             var temperature = weather.main.temp;
             var temp = (temperature - 273.15) * 1.80 + 32;
             console.log(temp + 'F')
-            $('.tempplaceholder').text(temp + ' F')
+            var roundTemp = Math.round(temp*10)/10
+            console.log(roundTemp)
+            $('.tempplaceholder').text(roundTemp + ' F')
 
-          
+
 
             console.log(weather.weather[0].description)
             var weatherDesc = weather.weather[0].description
@@ -52,19 +56,19 @@ $(document).ready(function () {
             console.log(weather.wind.speed)
             $('.windPH').text(weather.wind.speed + ' mph')
 
-// sunrise////////////////////////////////////////////////////////////
+    // sunrise////////////////////////////////////////////////////////////
             console.log(weather.sys.sunrise)
             $('.risePH').text(weather.sys.sunrise)
 
             var rise = weather.sys.sunrise
-            var convertedDate = new Date(rise*1000)
+            var convertedDate = new Date(rise * 1000)
 
 
             console.log(convertedDate)
 
             console.log(convertedDate.getHours())
             var hrs = convertedDate.getHours()
-            
+
             console.log(convertedDate.getMinutes())
             var min = (convertedDate.getMinutes())
 
@@ -75,19 +79,19 @@ $(document).ready(function () {
 
 
 
-// sunset//////////////////////////////////////////////////////////////////
+            // sunset//////////////////////////////////////////////////////////////////
             console.log(weather.sys.sunset)
             // $('.setPH').text(weather.sys.sunset)
 
             var set = weather.sys.sunset
-            var convertedDate = new Date(set*1000)
+            var convertedDate = new Date(set * 1000)
 
 
             console.log(convertedDate)
 
             console.log(convertedDate.getHours())
             var hrs = convertedDate.getHours()
-            
+
             console.log(convertedDate.getMinutes())
             var min = (convertedDate.getMinutes())
 
@@ -100,35 +104,43 @@ $(document).ready(function () {
 
 
 
-//temperature////////////////////////////////////////////////////////////////////
-            
+            //temperature////////////////////////////////////////////////////////////////////
+
             console.log(weather.main.temp_max)
             var tempo = weather.main.temp_max
             var maxitemp = (tempo - 273.15) * 1.80 + 32;
             console.log(maxitemp + 'F')
-            $('.maxtempPH').text(maxitemp + ' F')
+            // $('.maxtempPH').text(maxitemp + ' F')
+
+            var roundMaxiTemp = Math.round(maxitemp*10)/10
+            console.log(roundMaxiTemp)
+            $('.maxtempPH').text(roundMaxiTemp + ' F')
+
+
+            
 
 
 
 
 
-// Gif section/////////////////////////////////////////////////////////////////
+            // Gif section/////////////////////////////////////////////////////////////////
 
-            var search = ('weather '+ weatherDesc)
+            // var search = ('weather ' + weatherDesc + ' ' + weather.name)
+            var search = (' weather ' + weatherDesc)
             console.log(search)
             var gifURL = "https://api.giphy.com/v1/gifs/search?q=" +
-            search + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
+                search + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
 
 
             $.ajax({
                 url: gifURL,
                 method: 'GET'
-            }).then(function(gifs){
-                
-                var gif = gifs.data 
+            }).then(function (gifs) {
+
+                var gif = gifs.data
                 console.log(gif)
 
-                for (var i = 0; i< gif.length; i++){
+                for (var i = 0; i < gif.length; i++) {
                     console.log('ok')
                     var img = gif[3].images.fixed_height.url;
 
@@ -138,7 +150,7 @@ $(document).ready(function () {
                 picDiv.addClass('imagClass')
                 picDiv.attr('src', img)
 
-                $('.imageDiv').append(picDiv)
+                $('.imageDiv').html(picDiv)
             })
 
 
@@ -148,6 +160,8 @@ $(document).ready(function () {
 
 
     })
+
+
 
 
 
