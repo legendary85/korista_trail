@@ -42,7 +42,8 @@ $(document).ready(function () {
           
 
             console.log(weather.weather[0].description)
-            $('.descplaceholder').text(weather.weather[0].description)
+            var weatherDesc = weather.weather[0].description
+            $('.descplaceholder').text(weatherDesc)
 
 
             console.log(weather.main.humidity)
@@ -111,12 +112,42 @@ $(document).ready(function () {
 
 
 
+// Gif section/////////////////////////////////////////////////////////////////
 
+            var search = ('weather '+ weatherDesc + ' sun')
+            console.log(search)
+            var gifURL = "https://api.giphy.com/v1/gifs/search?q=" +
+            search + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
+
+
+            $.ajax({
+                url: gifURL,
+                method: 'GET'
+            }).then(function(gifs){
+                
+                var gif = gifs.data 
+                console.log(gif)
+
+                for (var i = 0; i< gif.length; i++){
+                    console.log('ok')
+                    var img = gif[0].images.fixed_height.url;
+
+                }
+
+                var picDiv = $('<img>')
+                picDiv.attr('src', img)
+
+                $('.imageDiv').append(picDiv)
+            })
 
 
 
         })
 
+
+
     })
+
+
 
 })
