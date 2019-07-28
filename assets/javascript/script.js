@@ -51,24 +51,55 @@ $(document).ready(function () {
             console.log(weather.wind.speed)
             $('.windPH').text(weather.wind.speed + ' mph')
 
-
+// sunrise////////////////////////////////////////////////////////////
             console.log(weather.sys.sunrise)
             $('.risePH').text(weather.sys.sunrise)
 
-
-
-            console.log(weather.sys.sunset)
-            $('.setPH').text(weather.sys.sunset)
-
-            var rise = weather.sys.sunset
+            var rise = weather.sys.sunrise
             var convertedDate = new Date(rise*1000)
 
+
             console.log(convertedDate)
+
+            console.log(convertedDate.getHours())
+            var hrs = convertedDate.getHours()
             
+            console.log(convertedDate.getMinutes())
+            var min = (convertedDate.getMinutes())
 
-           
-               
+            var time = hrs + ' : ' + min
 
+            console.log(time)
+            $('.risePH').text(time + ' AM')
+
+
+
+// sunset//////////////////////////////////////////////////////////////////
+            console.log(weather.sys.sunset)
+            // $('.setPH').text(weather.sys.sunset)
+
+            var set = weather.sys.sunset
+            var convertedDate = new Date(set*1000)
+
+
+            console.log(convertedDate)
+
+            console.log(convertedDate.getHours())
+            var hrs = convertedDate.getHours()
+            
+            console.log(convertedDate.getMinutes())
+            var min = (convertedDate.getMinutes())
+
+            var time = hrs + ' : ' + min
+
+            console.log(time)
+            $('.setPH').text(time + ' PM')
+
+
+
+
+
+//temperature////////////////////////////////////////////////////////////////////
             
             console.log(weather.main.temp_max)
             var tempo = weather.main.temp_max
