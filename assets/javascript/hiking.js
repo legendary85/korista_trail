@@ -11,7 +11,13 @@ $.ajax({
     method: 'GET'
 }).then(function(hiking){
     console.log(hiking)
+
+    var lat = $('.latplaceholder').val().trim()
+
+    console.log(lat)
 });
+
+
 
 
 })

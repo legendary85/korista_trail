@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
     $('.weather').hide()
+    $('.tabledos').hide()
 
 
     $('.btn').on('click', function (check) {
@@ -29,7 +30,7 @@ $(document).ready(function () {
         }).then(function (weather) {
 
 
-
+            // city///////////////////////////////////////////////
             console.log(weather)
 
             console.log(weather.name)
@@ -47,14 +48,18 @@ $(document).ready(function () {
             $('.tempplaceholder').text(roundTemp + ' F')
 
 
+            // weather descriptio//////////////////////
 
             console.log(weather.weather[0].description)
             var weatherDesc = weather.weather[0].description
             $('.descplaceholder').text(weatherDesc)
 
-
+            // humidity//////////////////////////////////////////////////
             console.log(weather.main.humidity)
             $('.humidityPH').text(weather.main.humidity + ' %')
+
+
+            // wind///////////////////////////////////////////////
 
             console.log(weather.wind.speed)
             $('.windPH').text(weather.wind.speed + ' mph')
@@ -120,7 +125,17 @@ $(document).ready(function () {
             $('.maxtempPH').text(roundMaxiTemp + ' F')
 
 
-            
+            // lon and lat//////////////////////////////////////////
+
+            console.log(weather.coord.lat)
+            console.log(weather.coord.lon)
+
+            var currentLat = weather.coord.lat
+            var currentLon = weather.coord.lon
+
+            $('.lonplaceholder').text(weather.coord.lon)
+            $('.latplaceholder').text(weather.coord.lat)
+
 
 
 
@@ -160,7 +175,7 @@ $(document).ready(function () {
                 $('.imageDiv').html(picDiv)
             })
 
-
+            // display weather card///////////////////////////////////////
             $('.weather').show()
 
 
