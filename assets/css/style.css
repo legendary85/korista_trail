@@ -8,10 +8,19 @@ a {
 }
 
 .jumbotron {
-    background:url("../images/julian-hochgesang-jyoTLVMv9So-unsplash\ copy.jpg") top center;
+    background:url("../images/image2.png") top center;
     background-size: cover;
     /* margin: 1em; */
-    padding-top: 25em;
-    padding-bottom:25em;
+    padding-top: 10em;
+    padding-bottom:22em; 
+    border-radius: 0 !important;
 }
 
+#logo {
+    color: #fff;
+}
+
+.card-body {
+    background: #313131 !important;
+    color:#fff;
+}
