@@ -56,7 +56,9 @@ $(document).ready(function () {
 
 
             
-            console.log(weather.weather[0].description)
+            console.log(weather.visibility)
+            $('.visibPH').text(weather.visibility)
+
 
 
 
