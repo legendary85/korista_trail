@@ -114,7 +114,7 @@ $(document).ready(function () {
 
 // Gif section/////////////////////////////////////////////////////////////////
 
-            var search = ('weather '+ weatherDesc + ' sun')
+            var search = ('weather '+ weatherDesc)
             console.log(search)
             var gifURL = "https://api.giphy.com/v1/gifs/search?q=" +
             search + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
@@ -130,11 +130,12 @@ $(document).ready(function () {
 
                 for (var i = 0; i< gif.length; i++){
                     console.log('ok')
-                    var img = gif[0].images.fixed_height.url;
+                    var img = gif[3].images.fixed_height.url;
 
                 }
 
                 var picDiv = $('<img>')
+                picDiv.addClass('imagClass')
                 picDiv.attr('src', img)
 
                 $('.imageDiv').append(picDiv)
