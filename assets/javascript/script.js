@@ -1,9 +1,12 @@
 $(document).ready(function () {
 
+    $('.weather').hide()
 
 
     $('.btn').on('click', function (check) {
         check.preventDefault()
+
+        $('.weather').toggle()
 
 
         console.log('button works')
