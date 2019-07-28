@@ -44,16 +44,22 @@ $(document).ready(function () {
             $('.humidityPH').text(weather.main.humidity)
 
             console.log(weather.wind.speed)
-            $('.windPH').text(weather.wind.speed)
+            $('.windPH').text(weather.wind.speed + ' mph')
 
 
             console.log(weather.sys.sunrise)
             $('.risePH').text(weather.sys.sunrise)
 
 
+
             console.log(weather.sys.sunset)
             $('.setPH').text(weather.sys.sunset)
+            var rise = weather.sys.sunset
+            var date = new Date(rise*1000)
+            console.log(date)
 
+            moment().add(10, 'days').calendar();
+            
 
             
             console.log(weather.visibility)
