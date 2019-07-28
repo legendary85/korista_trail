@@ -6,7 +6,7 @@ $(document).ready(function () {
     $('.btn').on('click', function (check) {
         check.preventDefault()
 
-        $('.weather').toggle()
+        $('.weather').show()
 
 
         console.log('button works')
@@ -129,7 +129,8 @@ $(document).ready(function () {
             // Gif section/////////////////////////////////////////////////////////////////
 
             // var search = ('weather ' + weatherDesc + ' ' + weather.name)
-            var search = (' weather ' + weatherDesc)
+            // var search = (' weather ' + weatherDesc)
+            var search = ('jogging ')
             console.log(search)
             var gifURL = "https://api.giphy.com/v1/gifs/search?q=" +
                 search + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
@@ -143,9 +144,12 @@ $(document).ready(function () {
                 var gif = gifs.data
                 console.log(gif)
 
+                
+
                 for (var i = 0; i < gif.length; i++) {
-                    console.log('ok')
+                    console.log('pic is called')
                     var img = gif[3].images.fixed_height.url;
+                    console.log(gif[3].rating)
 
                 }
 
