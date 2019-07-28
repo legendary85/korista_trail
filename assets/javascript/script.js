@@ -33,15 +33,20 @@ $(document).ready(function () {
             $('.cityplaceholder').text(weather.name)
 
             console.log(weather.main.temp)
-            $('.tempplaceholder').text(weather.main.temp)
+            
+            var temperature = weather.main.temp;
+            var temp = (temperature - 273.15) * 1.80 + 32;
+            console.log(temp + 'F')
+            $('.tempplaceholder').text(temp + ' F')
 
+          
 
             console.log(weather.weather[0].description)
             $('.descplaceholder').text(weather.weather[0].description)
 
 
             console.log(weather.main.humidity)
-            $('.humidityPH').text(weather.main.humidity)
+            $('.humidityPH').text(weather.main.humidity + ' %')
 
             console.log(weather.wind.speed)
             $('.windPH').text(weather.wind.speed + ' mph')
@@ -54,16 +59,22 @@ $(document).ready(function () {
 
             console.log(weather.sys.sunset)
             $('.setPH').text(weather.sys.sunset)
+
             var rise = weather.sys.sunset
-            var date = new Date(rise*1000)
-            console.log(date)
+            var convertedDate = new Date(rise*1000)
 
-            moment().add(10, 'days').calendar();
+            console.log(convertedDate)
             
 
+           
+               
+
             
-            console.log(weather.visibility)
-            $('.visibPH').text(weather.visibility)
+            console.log(weather.main.temp_max)
+            var tempo = weather.main.temp_max
+            var maxitemp = (tempo - 273.15) * 1.80 + 32;
+            console.log(maxitemp + 'F')
+            $('.maxtempPH').text(maxitemp + ' F')
 
 
 
