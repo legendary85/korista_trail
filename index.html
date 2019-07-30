@@ -15,8 +15,9 @@
     crossorigin="anonymous"></script>
   <title>Korista Trai</title>
 </head>
-<!-- Navbar -->
+
 <body>
+  <!-- Navbar -->
   <nav id="top-nav" class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand" href="#">Kt</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -41,7 +42,7 @@
     </div>
   </nav>
 
-<!-- Banner -->
+  <!-- Banner -->
   <div class="jumbotron">
     <div class="container">
       <div class="row">
@@ -60,71 +61,71 @@
     </div>
   </div>
 
-<!-- Search Bar -->
+  <!-- Search Bar -->
   <nav class="navbar navbar-light bg-light">
-      <form class="form-inline">
-        <input id="zip-code" class="form-control mr-sm-2" type="search" placeholder="Enter zip code" aria-label="Search">
-        <button id="zip-btn" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </nav>
-<!--Weather and Trail area -->
-  <div class="container">
-      <div class="row">
-        <div class="col-lg-6 mb-4">
-          <div class="weather">Weather</div>
-          <div class="weatherImageholder">
-            <img src="/assets/images/Screen Shot 2019-07-28 at 3.37.40 PM.png" alt="">
-          </div>  
+    <form class="form-inline">
+      <h3>Zip Code</h3><span id="error"></span>
+      <input id="zip-code" class="form-control mr-sm-2" type="search" placeholder="Enter zip code" aria-label="Search">
+      <button id="zip-btn" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </nav>
+  <!--Weather and Trail area -->
+  <!-- <div class="container">
+    <div class="row">
+      <div class="col-lg-6 mb-4">
+        <div class="weather">Weather</div>
+        <div class="weatherImageholder">
+          <img src="/assets/images/Screen Shot 2019-07-28 at 3.37.40 PM.png" alt="">
         </div>
-          <div class="col-lg-6 mb-4">
-            <div id="trail">Trail
-              <div class="trailImageHolder">
-                <img src="/assets/images/Screen Shot 2019-07-28 at 3.40.54 PM.png" alt="">
-              </div>
-            </div>
+      </div>
+      <div class="col-lg-6 mb-4">
+        <div id="trail">Trail
+          <div class="trailImageHolder">
+            <img src="/assets/images/Screen Shot 2019-07-28 at 3.40.54 PM.png" alt="">
           </div>
+        </div>
       </div>
     </div>
-    <br>
+  </div>
+  <br>
 
-    <div class="container">
-        <!-- Page Heading -->
-        <h1 class="my-4">Page Heading
-          <small>Secondary Text</small>
-        </h1>
-        <div class="row">
-          <div class="col-lg-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="/assets/images/image1.png" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Project One</a>
-                </h4>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="assets/images/image3.png" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Project Two</a>
-                </h4>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit aliquam aperiam nulla perferendis dolor nobis numquam, rem expedita, aliquid optio, alias illum eaque. Non magni, voluptates quae, necessitatibus unde temporibus.</p>
-              </div>
-            </div>
-          </div>
+  <div class="container">
+    <-- Page Heading -->
+  <!-- <h1 class="my-4">Page Heading
+      <small>Secondary Text</small>
+    </h1>
+    <div class="row">
+      <div class="col-lg-6 mb-4">
+        <div class="card h-100">
+          <a href="#"><img class="card-img-top" src="/assets/images/image1.png" alt=""></a>
+          <div class="card-body">
+            <h4 class="card-title">
+              <a href="#">Project One</a>
+            </h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio,
+              gravida pellentesque urna varius vitae.</p>
           </div>
         </div>
-        
+      </div>
+      <div class="col-lg-6 mb-4">
+        <div class="card h-100">
+          <a href="#"><img class="card-img-top" src="assets/images/image3.png" alt=""></a>
+          <div class="card-body">
+            <h4 class="card-title">
+              <a href="#">Project Two</a>
+            </h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit aliquam aperiam nulla
+              perferendis dolor nobis numquam, rem expedita, aliquid optio, alias illum eaque. Non magni, voluptates
+              quae, necessitatibus unde temporibus.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-
-
-
-<!-- footer -->
-  <footer>
-    <div class="card">
+  <-- footer -->
+  <!-- <footer> -->
+  <!-- <div class="card">
       <div class="card-body footer">
         <blockquote class="blockquote mb-0">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
@@ -132,11 +133,106 @@
         </blockquote>
       </div>
     </div>
-  </footer>
+  </footer> -->
+
+
+
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="script.js"></script>;
+  <-- <script src="assets/javascript/dynamic.js"></script> -->
+
+  <!-- </body>
+
+</html> 
+
+        <!-- weather div for API -->
+
+  <div class="weather">
+
+    <div class="card mt-5 mb-5">
+      <h5 class="card-header text-center">Today's Weather!</h5>
+      <div class="card-body">
+
+        <table class="table">
+
+          <tbody>
+            <tr>
+              <th scope="row"></th>
+              <td class="city font-weight-bold"> City:</td>
+              <td class="cityplaceholder">--</td>
+              <td class="temp font-weight-bold"> Temperature:</td>
+              <td class="tempplaceholder">--</td>
+
+            </tr>
+            <tr>
+              <th scope="row"></th>
+
+              <td class="desc font-weight-bold">Description:</td>
+              <td class="descplaceholder text-capitalize">--</td>
+              <td class="maxtemp font-weight-bold"> Max Temp:</td>
+              <td class="maxtempPH">--</td>
+
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row"></th>
+              <td class="wind font-weight-bold">Wind speed:</td>
+              <td class="windPH">--</td>
+              <td class="humidity font-weight-bold"> Humidity:</td>
+              <td class="humidityPH">--</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row"></th>
+              <td class="rise font-weight-bold">Sunrise:</td>
+              <td class="risePH">--</td>
+              <td class="set font-weight-bold"> Sunset:</td>
+              <td class="setPH">--</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+
+
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+  <div id="latlon">
+    <table class="tabledos">
+
+      <tbody>
+        <tr>
+          <th scope="row"></th>
+          <td class="long">Lon:</td>
+          <td class="lonplaceholder">--</td>
+          <td class="lat"> Lat:</td>
+          <td class="latplaceholder">--</td>
+
+        </tr>
+
+      </tbody>
+
+  </div>
+
+  <div id="trail"></div>
+
+
+  </div>
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="script.js"></script>
+  <script src="assets/javascript/script.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+  <script src="assets/javascript/hiking.js"></script>
+
 
 </body>
 
