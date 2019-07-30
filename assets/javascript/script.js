@@ -7,9 +7,7 @@ $(document).ready(function () {
     $('#zip-btn').on('click', function (check) {
         check.preventDefault()
 
-
-
-
+        
         console.log('button works')
 
         var zipcode = $('#zip-code').val().trim()
