@@ -7,14 +7,13 @@ $(document).ready(function () {
     $('#zip-btn').on('click', function (check) {
         check.preventDefault()
 
-        
+
         console.log('button works')
 
         var zipcode = $('#zip-code').val().trim()
         console.log(zipcode)
 
         // var zipcode = '75228'
-
 
         var APIkey = 'fb0ce6d825db30974bf096625bf170a2';
 
@@ -46,7 +45,7 @@ $(document).ready(function () {
             $('.tempplaceholder').text(roundTemp + ' F')
 
 
-            // weather descriptio//////////////////////
+            // weather description//////////////////////
 
             console.log(weather.weather[0].description)
             var weatherDesc = weather.weather[0].description
