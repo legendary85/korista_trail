@@ -4,10 +4,10 @@ $(document).ready(function () {
     $('.tabledos').hide()
 
 
-    $('.btn').on('click', function (check) {
+
+    $('#zip-btn').on('click', function (check) {
         check.preventDefault()
 
-     
 
 
         console.log('button works')
@@ -16,6 +16,7 @@ $(document).ready(function () {
         console.log(zipcode)
 
         // var zipcode = '75228'
+
 
 
         var APIkey = 'fb0ce6d825db30974bf096625bf170a2';
@@ -43,12 +44,17 @@ $(document).ready(function () {
             var temperature = weather.main.temp;
             var temp = (temperature - 273.15) * 1.80 + 32;
             console.log(temp + 'F')
-            var roundTemp = Math.round(temp*10)/10
+
+            var roundTemp = Math.round(temp * 10) / 10
+
+
             console.log(roundTemp)
             $('.tempplaceholder').text(roundTemp + ' F')
 
 
+
             // weather descriptio//////////////////////
+
 
             console.log(weather.weather[0].description)
             var weatherDesc = weather.weather[0].description
@@ -64,7 +70,9 @@ $(document).ready(function () {
             console.log(weather.wind.speed)
             $('.windPH').text(weather.wind.speed + ' mph')
 
+
     // sunrise////////////////////////////////////////////////////////////
+
             console.log(weather.sys.sunrise)
             $('.risePH').text(weather.sys.sunrise)
 
@@ -120,7 +128,8 @@ $(document).ready(function () {
             console.log(maxitemp + 'F')
             // $('.maxtempPH').text(maxitemp + ' F')
 
-            var roundMaxiTemp = Math.round(maxitemp*10)/10
+            var roundMaxiTemp = Math.round(maxitemp * 10) / 10
+
             console.log(roundMaxiTemp)
             $('.maxtempPH').text(roundMaxiTemp + ' F')
 
@@ -159,7 +168,6 @@ $(document).ready(function () {
                 var gif = gifs.data
                 console.log(gif)
 
-                
 
                 for (var i = 0; i < gif.length; i++) {
                     console.log('pic is called')
