@@ -25,6 +25,10 @@ a {
     background: #313131 !important;
     color:#fff;
 }
+
+#zip-code{
+    margin-left: 5px;
+}
 p{
     color: #fff;
 }
