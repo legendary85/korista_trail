@@ -1,5 +1,6 @@
 
 
+
 #top-nav {
     background: #313131;
 }
@@ -36,11 +37,22 @@ img{
     width: 500px;
 }
 
-.weather{
-    text-align: center;
+  
+body{
+    height: 100%;
+
 }
 
-#trail {
-    text-align: center;
+.imagClass{
+    width: 70%;
+}
+
+.jumbotron{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.281)), url('/assets/images/trailone.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+
+   
 
 }
