@@ -1,3 +1,43 @@
+
+
+
+#top-nav {
+    background: #313131;
+}
+a {
+    color: #fff !important;
+}
+
+.jumbotron {
+    position: relative;
+    background:url("../images/image2.png") top center;
+    background-size: cover;
+    /* margin: 1em; */
+    padding-top: 10em;
+    padding-bottom:22em; 
+    border-radius: 0 !important;
+}
+
+#logo {
+    color: #fff;
+}
+
+.card-body {
+    background: #313131 !important;
+    color:#fff;
+}
+
+#zip-code{
+    margin-left: 5px;
+}
+p{
+    color: #fff;
+}
+img{
+    width: 500px;
+}
+
+  
 body{
     height: 100%;
 
@@ -7,11 +47,12 @@ body{
     width: 70%;
 }
 
-.jumbotron{
+/* .jumbotron{
     background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.281)), url('/assets/images/trailone.jpg');
     background-size: cover;
     background-position: center;
     color: white;
-    text-align: center;
 
-}
+   
+
+} */

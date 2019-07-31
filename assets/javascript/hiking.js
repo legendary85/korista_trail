@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $("#trail").hide();
-    $("#latlon").hide();
+    // $("#latlon").hide();
 
     $('.btn').on('click', function (check) {
         check.preventDefault()

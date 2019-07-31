@@ -2,180 +2,223 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
-
-
-    <title>Korista Trai</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <title>Korista Trai</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Kt</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Trails</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Photos</a>
-                </li>
-                <li class="nav-item">
-                    <!-- <a class="nav-link disabled" href="#">Disabled</a> -->
-                </li>
-            </ul>
-        </div>
-    </nav>
+  <!-- Navbar -->
+  <nav id="top-nav" class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="#">Kt</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Trails</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/assets/gallery.html">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Banner -->
+  <div class="jumbotron">
     <div class="container">
-        <div class="jumbotron">
-            <h1 class="display-4">Korista Trails!</h1>
+      <div class="row">
+        <div class="col-sm-6">
+          <h1 id="logo" class="display-4">Korista Trails!</h1>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem
+          </p>
 
         </div>
+      </div>
+    </div>
+  </div>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-sm">
+  <!-- Search Bar -->
+  <nav class="navbar navbar-light bg-light">
+    <form class="form-inline">
+      <h3>Zip Code</h3><span id="error"></span>
+      <input id="zip-code" class="form-control mr-sm-2" type="search" placeholder="Enter zip code" aria-label="Search">
+      <button id="zip-btn" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </nav>
 
-                    <form>
+  <!--weather div for API-->
 
-                        <div class="form-group">
-                            <label for="">Zip Code</label>
-                            <input type="text" class="form-control" id="zip-code" placeholder="Enter zip code">
+    <div class="weather">
 
-                        </div>
+      <div class="card mt-5 mb-5">
+        <h5 class="card-header text-center">Today's Weather!</h5>
+        <div class="card-body">
 
+          <table class="table">
 
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
+            <tbody>
+              <tr>
+                <th scope="row"></th>
+                <td class="city font-weight-bold"> City:</td>
+                <td class="cityplaceholder">--</td>
+                <td class="temp font-weight-bold"> Temperature:</td>
+                <td class="tempplaceholder">--</td>
 
+              </tr>
+              <tr>
+                <th scope="row"></th>
 
+                <td class="desc font-weight-bold">Description:</td>
+                <td class="descplaceholder text-capitalize">--</td>
+                <td class="maxtemp font-weight-bold"> Max Temp:</td>
+                <td class="maxtempPH">--</td>
 
-                </div>
-                <div class="col-sm">
-
-                </div>
-                <div class="col-sm imageDiv">
-
-
-                </div>
-            </div>
-        </div>
-
-
-
-
-
-
-
-        <!-- weather div for API -->
-
-        <div class="weather">
-
-            <div class="card mt-5 mb-5">
-                <h5 class="card-header text-center">Today's Weather!</h5>
-                <div class="card-body">
-
-                    <table class="table">
-
-                        <tbody>
-                            <tr>
-                                <th scope="row"></th>
-                                <td class="city font-weight-bold"> City:</td>
-                                <td class="cityplaceholder">--</td>
-                                <td class="temp font-weight-bold"> Temperature:</td>
-                                <td class="tempplaceholder">--</td>
-
-                            </tr>
-                            <tr>
-                                <th scope="row"></th>
-
-                                <td class="desc font-weight-bold">Description:</td>
-                                <td class="descplaceholder text-capitalize">--</td>
-                                <td class="maxtemp font-weight-bold"> Max Temp:</td>
-                                <td class="maxtempPH">--</td>
-
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row"></th>
-                                <td class="wind font-weight-bold">Wind speed:</td>
-                                <td class="windPH">--</td>
-                                <td class="humidity font-weight-bold"> Humidity:</td>
-                                <td class="humidityPH">--</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row"></th>
-                                <td class="rise font-weight-bold">Sunrise:</td>
-                                <td class="risePH">--</td>
-                                <td class="set font-weight-bold"> Sunset:</td>
-                                <td class="setPH">--</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-
-                </div>
-            </div>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row"></th>
+                <td class="wind font-weight-bold">Wind speed:</td>
+                <td class="windPH">--</td>
+                <td class="humidity font-weight-bold"> Humidity:</td>
+                <td class="humidityPH">--</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row"></th>
+                <td class="rise font-weight-bold">Sunrise:</td>
+                <td class="risePH">--</td>
+                <td class="set font-weight-bold"> Sunset:</td>
+                <td class="setPH">--</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
 
 
         </div>
-
-
-
-        <div id="trail" class="container">
-
-            <div class="card mt-5 mb-5">
-                <h5 class="card-header text-center">Hiking Trails within 20 Miles</h5>
-                <div id="trailHeader">
-
-                </div>
-            </div>
-        </div>
-
-
-        <div id="latlon">
-            <table class="tabledos">
-
-                <tbody>
-                    <tr>
-                        <th scope="row"></th>
-                        <td class="long">Lon:</td>
-                        <td class="lonplaceholder">--</td>
-                        <td class="lat"> Lat:</td>
-                        <td class="latplaceholder">--</td>
-
-                    </tr>
-
-                </tbody>
-
-        </div>
-
-
-
-
+      </div>
 
 
     </div>
+    
+    <div id="trail" class="container">
+        <div class="card mt-5 mb-5">
+            <h5 class="card-header text-center">Hiking Trails within 20 Miles</h5>
+            <div id="trailHeader">
+            </div>
+        </div>
+    </div>
 
+
+    <!-- <div id="latlon">
+      <table class="tabledos">
+
+        <tbody>
+          <tr>
+            <th scope="row"></th>
+            <td class="long">Lon:</td>
+            <td class="lonplaceholder">--</td>
+            <td class="lat"> Lat:</td>
+            <td class="latplaceholder">--</td>
+
+          </tr>
+
+        </tbody>
+
+    </div> -->
+
+
+  
+
+
+    <!--Other area -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 mb-4">
+          <div class="other">Other Section</div>
+          <div class="otherImageholder">
+            <img src="/assets/images/bikes and cofee.png" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6 mb-4">
+          <div id="other2">Other Section2
+            <div class="otherImageHolder2">
+              <img src="/assets/images/Screen Shot 2019-07-30 at 5.43.10 PM.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+    <!-- Page Heading -->
+    <h1 class="my-4">Page Heading
+      <small>Secondary Text</small>
+    </h1>
+    <div class="row">
+      <div class="col-lg-6 mb-4">
+        <div class="card h-100">
+          <a href="#"><img class="card-img-top" src="/assets/images/image1.png" alt=""></a>
+          <div class="card-body">
+            <h4 class="card-title">
+              <a href="#">Project One</a>
+            </h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio,
+              gravida pellentesque urna varius vitae.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 mb-4">
+        <div class="card h-100">
+          <a href="#"><img class="card-img-top" src="assets/images/image3.png" alt=""></a>
+          <div class="card-body">
+            <h4 class="card-title">
+              <a href="#">Project Two</a>
+            </h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit aliquam aperiam nulla
+              perferendis dolor nobis numquam, rem expedita, aliquid optio, alias illum eaque. Non magni, voluptates
+              quae, necessitatibus unde temporibus.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br> 
+      
+      <!-- <footer> -->
+    <div class="card">
+      <div class="card-body footer">
+        <blockquote class="blockquote mb-0">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+          <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+        </blockquote>
+      </div>
+    </div>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/javascript/script.js"></script>
