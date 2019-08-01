@@ -1,7 +1,7 @@
 
 
 
-#top-nav {
+ #top-nav {
     background: #313131;
     position: fixed; 
     width: 100%;
@@ -19,7 +19,6 @@ a:hover {
     position: relative;
     background:url("../images/image2.png") top center;
     background-size: cover;
-    /* margin: 1em; */
     padding-top: 10em;
     padding-bottom:22em; 
     border-radius: 0 !important;
@@ -52,14 +51,18 @@ body{
 
 .imagClass{
     width: 70%;
-}
+} 
 
-/* .jumbotron{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.281)), url('/assets/images/trailone.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-
-   
-
-} */
+.iframe-container{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; 
+    height: 0;
+  }
+  .iframe-container iframe{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
