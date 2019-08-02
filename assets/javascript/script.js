@@ -1,10 +1,7 @@
 $(document).ready(function () {
 
     $('.weather').hide()
-    $('.tabledos').hide()
-
-
-    // $(document).on("click", "#zip-btn", function (e) {
+    $('.tabledos').hide(    // $(document).on("click", "#zip-btn", function (e) {
     //     e.preventDefault();
     //     $.scrollTo('.weather', 2000);
     // });
