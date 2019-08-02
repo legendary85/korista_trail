@@ -1,32 +1,32 @@
 
-body{
+  body{
     height: 100%;
 
 }
 
 /* navbar styling */
- #top-nav {
+  #top-nav {
     background: #313131;
     /* position: fixed;  */
     width: 100%;
     z-index:10 ; 
 }
 
-a {
+  a {
     color: #fff !important;
 }
 
-a:hover {
+  a:hover {
     color: green !important;
 
 }
 
-#logo {
+  #logo {
     color: #fff;
 }
 
 /* jumbotron styling */
-.jumbotron {
+  .jumbotron {
     position: relative;
     background:linear-gradient(rgba(0, 0, 0, 0.185), rgba(0, 0, 0, 0.144)), url("../images/image2.png") top center;
     background-size: cover;
@@ -37,29 +37,29 @@ a:hover {
 }
 
 
-.card-body {
+  .card-body {
     background: #313131 !important;
     color:#fff;
 }
 
-#zip-code{
+  #zip-code{
     margin-left: 5px;
 }
-p{
+  p{
     color: #fff;
 }
-img{
+  img{
     width: 500px;
 }
 
   
 
-.imagClass{
+  .imagClass{
     width: 70%;
     height:50%;
 } 
 /* yotube video (responsive) */
-.iframe-container{
+  .iframe-container{
     position: relative;
     width: 100%;
     padding-bottom: 56.25%; 
@@ -89,12 +89,17 @@ img{
   }
 
 
-
+/* buttons */
   #zip-btn{
       background-color: #fd6031;
       padding-left: 20px;
       padding-right: 20px;
+  }
 
+  #hide{
+    background-color: #fd6031;
+    color: black;
+    border: none;
   }
 
   .main-para{
@@ -121,7 +126,7 @@ img{
   footer {
     text-align: center;
 }
-#cont-video {
+  #cont-video {
     text-align: center;
 }
 
