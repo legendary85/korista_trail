@@ -74,6 +74,7 @@ body{
   }
 
   #video-container{
+      width: 100%;
       margin-top: 50px;
   }
 
@@ -98,7 +99,23 @@ body{
       top: 56px
   }
 
+  .my-4{
+      text-align: center;
+  }
+
+  .other {
+      text-align: center;
+  }
+
+  #other{
+      text-align: center;
+      margin-bottom: 7px;
+  }
+
   footer {
+    text-align: center;
+}
+#cont-video {
     text-align: center;
 }
 
