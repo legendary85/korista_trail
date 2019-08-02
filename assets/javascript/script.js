@@ -34,6 +34,12 @@ $(document).ready(function () {
             // city///////////////////////////////////////////////
             console.log(weather)
 
+            
+
+
+            var cityId = weather.sys.id
+            console.log(cityId)
+
             console.log(weather.name)
             $('.cityplaceholder ').text(weather.name)
 
@@ -71,7 +77,7 @@ $(document).ready(function () {
             $('.windPH').text(weather.wind.speed + ' mph')
 
 
-    // sunrise////////////////////////////////////////////////////////////
+            // sunrise////////////////////////////////////////////////////////////
 
             console.log(weather.sys.sunrise)
             $('.risePH').text(weather.sys.sunrise)
@@ -159,6 +165,7 @@ $(document).ready(function () {
             var gifURL = "https://api.giphy.com/v1/gifs/search?q=" +
                 search + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
 
+                
 
             $.ajax({
                 url: gifURL,
@@ -170,9 +177,9 @@ $(document).ready(function () {
 
 
                 for (var i = 0; i < gif.length; i++) {
-                    console.log('pic is called')
+                    // console.log('pic is called')
                     var img = gif[3].images.fixed_height.url;
-                    console.log(gif[3].rating)
+                    // console.log(gif[3].rating)
 
                 }
 
@@ -188,12 +195,22 @@ $(document).ready(function () {
 
 
 
+            // window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 15,cityid: '4684888',appid: 'fb0ce6d825db30974bf096625bf170a2',units: 'metric',containerid: 'openweathermap-widget-15',  });  
+            // (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
+            // var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();
+
+
+
         })
 
 
 
     })
 
+    
 
 
+
+   
 })
+
