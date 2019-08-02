@@ -1,21 +1,39 @@
 
+  body{
+    height: 100%;
 
+}
+.main-text
+{
+    position: absolute;
+    top: 50px;
+    width: 96.66666666666666%;
+    color: #FFF;
+}
 
- #top-nav {
+/* navbar styling */
+  #top-nav {
     background: #313131;
     /* position: fixed;  */
     width: 100%;
     z-index:10 ; 
 }
-a {
+
+  a {
     color: #fff !important;
 }
-a:hover {
+
+  a:hover {
     color: green !important;
 
 }
 
-.jumbotron {
+  #logo {
+    color: #fff;
+}
+
+/* jumbotron styling */
+  .jumbotron {
     position: relative;
     background:linear-gradient(rgba(0, 0, 0, 0.185), rgba(0, 0, 0, 0.144)), url("../images/image2.png") top center;
     background-size: cover;
@@ -25,36 +43,30 @@ a:hover {
     
 }
 
-#logo {
-    color: #fff;
-}
 
-.card-body {
+  .card-body {
     background: #313131 !important;
     color:#fff;
 }
 
-#zip-code{
+  #zip-code{
     margin-left: 5px;
 }
-p{
+  p{
     color: #fff;
 }
-img{
+  img{
     width: 500px;
 }
 
   
-body{
-    height: 100%;
 
-}
-
-.imagClass{
+  .imagClass{
     width: 70%;
+    height:50%;
 } 
-
-.iframe-container{
+/* yotube video (responsive) */
+  .iframe-container{
     position: relative;
     width: 100%;
     padding-bottom: 56.25%; 
@@ -67,13 +79,37 @@ body{
     width: 100%;
     height: 100%;
   }
+  #description{
+    display: none;
+  }
 
 
+  #head-container{
+      margin-top: 50px;
+      text-align: center;
+  }
+
+  #video-container{
+      width: 100%;
+      margin-top: 50px;
+  }
+
+  .col-sm-6{
+      margin-bottom: 10px;
+  }
+
+
+/* buttons */
   #zip-btn{
       background-color: #fd6031;
       padding-left: 20px;
       padding-right: 20px;
+  }
 
+  #hide{
+    background-color: #fd6031;
+    color: black;
+    border: none;
   }
 
   .main-para{
@@ -83,4 +119,44 @@ body{
   .weather{
       top: 56px
   }
+
+  .my-4{
+      text-align: center;
+  }
+
+  .other {
+      text-align: center;
+  }
+
+  #other{
+      text-align: center;
+      margin-bottom: 7px;
+  }
+
+  footer {
+    text-align: center;
+}
+  #cont-video {
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+ 
+  .main-para{
+    display: none;  
+  }
+ #zip-c{
+   display: none;
+ }
+ .form-inline{
+   display: block;
+ }
+ #zip-btn{
+   margin-top: 10px;
+ }
+ #description{
+   display: block;
+ }
+
+}
 

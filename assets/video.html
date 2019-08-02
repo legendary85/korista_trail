@@ -9,50 +9,122 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>Korista Trails - Videos</title>
 </head>
 
 <body>
-    <!-- For testing purposes with youTube -->
-    <h3>Beginner Bike Tips</h3>
-  <!-- <div id="player"></div>     -->
-  <div id="ytplayer"></div>
+    <!-- Navbar -->
+    <nav id="top-nav" class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">Kt</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Trails</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/assets/video.html">Videos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <div id="head-container" class="container-fluid">
+        <h1>Biking Tips and Tricks</h1>
+    </div>
+    <div id="video-container" class="container">
+        <div id="videos" class="row">
+            <div class="col-sm-6">
+                <div class="iframe-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/CsXGMeMc75U" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
 
-  <script>
-    // Load the IFrame Player API code asynchronously.
-    var tag = document.createElement('script');
-    tag.src = "https://www.youtube.com/player_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-  
-    // Replace the 'ytplayer' element with an <iframe> and
-    // YouTube player after the API code downloads.
-    var player;
-    function onYouTubePlayerAPIReady() {
-      player = new YT.Player('ytplayer', {
-        height: '360',
-        width: '640',
-        videoId: 'OFoSU1ytTys'
-      });
-    }
-  </script>
+            <div class="col-sm-6">
+                <div class="iframe-container">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/OFoSU1ytTys" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="iframe-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/BhZZnTgxrDM" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="iframe-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/7EXyrazT4DU" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="iframe-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/_-vguUGj8pg" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="iframe-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/4v3_WkIEIIw" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+
+                </div>
+            </div>
+        </div>
+    </div>
 
 
+    <!-- <footer> -->
+    <footer>
+        <div class="card">
+            <div class="card-body footer">
+                <div class="container">
+                    <a href="https://github.com/legendary85/korista_trail" target="_blank">
+                        <i class="fa fa-github" style="font-size:36px"></i>
 
-  
-  <script src="../assets/javascript/youtube.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="assets/javascript/script.js"></script>
+                    </a>
+                    <p class="coded-by">Coded by: Korista Tech Solutions</p>
+                </div>
 
-        <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-    
-        <script src="assets/javascript/hiking.js"></script>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <script src="assets/javascript/hiking.js"></script>
 </body>
 
 </html>

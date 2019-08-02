@@ -63,7 +63,7 @@ $(document).ready(function () {
                     var hikeImage = $("<img>");
                     hikeImage.addClass("rounded float-left mr-2");
                     hikeImage.attr("src", trailResults[i].imgSmallMed);
-
+                   
                     //append new img to new div cardBody
                     cardBody.append(hikeImage);
 
@@ -80,6 +80,10 @@ $(document).ready(function () {
                     pLocation.addClass("clearfix");
                     //append the <p> to cardBody div
                     cardBody.append(pLocation);
+
+
+                    //place holder image if image is missing
+                    
 
                 };
 
