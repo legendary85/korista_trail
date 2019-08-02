@@ -4,6 +4,13 @@ $(document).ready(function () {
     $('.tabledos').hide()
 
 
+    // $(document).on("click", "#zip-btn", function (e) {
+    //     e.preventDefault();
+    //     $.scrollTo('.weather', 2000);
+    // });
+    
+
+
 
     $('#zip-btn').on('click', function (check) {
         check.preventDefault()

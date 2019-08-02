@@ -16,6 +16,8 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.js"></script>
   <title>Korista Trai</title>
 </head>
 
@@ -27,7 +29,7 @@
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav"> 
+    <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
@@ -51,16 +53,18 @@
       <div class="row">
         <div class="col-sm-6">
           <h1 id="logo" class="display-4">Korista Trails!</h1>
-          <p>
+          <p class="main-para">
             The benefits of cycling are almost as endless as the country lanes you could soon be exploring. If you’re
             considering taking up cycling, and weighing it up against other potential activities, then we’re here to
-            tell you that cycling is hands down the best option! And now it's easier than ever to find the nearest trail using our app!
+            tell you that cycling is hands down the best option! And now it's easier than ever to find the nearest trail
+            using our app!
           </p>
 
           <form class="form-inline">
             <!-- <h3>Zip Code</h3><span id="error"></span> -->
-            <input id="zip-code" class="form-control mr-sm-2" type="search" placeholder="Enter zip code" aria-label="Search">
-            <button id="zip-btn" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <input id="zip-code" class="form-control mr-sm-2" type="search" placeholder="Enter zip code"
+              aria-label="Search">
+            <button id="zip-btn"  class="btn" type="submit">Search</button>
           </form>
 
         </div>
@@ -69,22 +73,22 @@
     <!-- Search Bar -->
 
     <div class="col-sm-6">
-  
-    
+
+
 
     </div>
 
-  
+
   </div>
 
-  
+
 
   <!--weather div for API 1-->
 
   <div id="openweathermap-widget-15"></div>
   <!--weather div for API 2-->
 
-  <div class="weather">
+  <div class="weather sticky-top">
 
     <div class="card mt-5 mb-5">
       <h2 class="card-header text-center">Today's Weather!</h2>
@@ -109,7 +113,7 @@
               <td class="maxtemp font-weight-bold"> Max Temp:</td>
               <td class="maxtempPH">--</td>
 
-              <td></td>
+              <!-- <td></td> -->
             </tr>
             <tr>
               <th scope="row"></th>
@@ -117,7 +121,7 @@
               <td class="windPH">--</td>
               <td class="humidity font-weight-bold"> Humidity:</td>
               <td class="humidityPH">--</td>
-              <td></td>
+              <!-- <td></td> -->
             </tr>
             <tr>
               <th scope="row"></th>
@@ -125,6 +129,14 @@
               <td class="risePH">--</td>
               <td class="set font-weight-bold"> Sunset:</td>
               <td class="setPH">--</td>
+              <!-- <td></td> -->
+            </tr>
+
+            <tr>
+              <th></th>
+              <td></td>
+              <td></td>
+              <td></td>
               <td></td>
             </tr>
           </tbody>
@@ -171,7 +183,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-6 mb-4">
-        <div class="other">Beginner Tips</div>
+        <div class="other h3">Beginner Tips</div>
         <div class="iframe-container">
           <!--beginner tips youtube video -->
           <iframe width="560" height="315" src="https://www.youtube.com/embed/4ssLDk1eX9w" frameborder="0"
@@ -181,7 +193,7 @@
       </div>
       <div class="col-lg-6 mb-4">
 
-        <div id="other2">Map of your current area
+        <div id="other2" class="h3">Map of Your Current Area
           <div class="otherImageHolder2">
             <!-- BEGIN Hiking Project -->
             <iframe style="width:100%; max-width:1200px; height:340px;" frameborder="0" scrolling="no"
@@ -195,32 +207,32 @@
   </div>
   <div class="container">
     <!-- Page Heading -->
-    <h1 class="my-4">Page Heading
-      <small>Secondary Text</small>
+    <h1 class="my-4">Why go hiking?
+      <small>Let's explore!</small>
     </h1>
     <div class="row">
-      <div class="col-lg-6 mb-4">
-        <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="/assets/images/image1.png" alt=""></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="#">Project One</a>
-            </h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio,
-              gravida pellentesque urna varius vitae.</p>
-          </div>
-        </div>
-      </div>
       <div class="col-lg-6 mb-4">
         <div class="card h-100">
           <a href="#"><img class="card-img-top" src="assets/images/image3.png" alt=""></a>
           <div class="card-body">
             <h4 class="card-title">
-              <a href="#">Project Two</a>
+              <a href="#">Social Gains</a>
             </h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit aliquam aperiam nulla
-              perferendis dolor nobis numquam, rem expedita, aliquid optio, alias illum eaque. Non magni, voluptates
-              quae, necessitatibus unde temporibus.</p>
+            <p class="card-text">In today’s hectic lifestyle, people have become so busy with their work-life balance
+              crisis, that they have forgotten to take a moment and look around at the nature. Cycling is a great
+              activity to explore new places in the town and be one with nature.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 mb-4">
+        <div class="card h-100">
+          <a href="#"><img class="card-img-top" src="/assets/images/image1.png" alt=""></a>
+          <div class="card-body">
+            <h4 class="card-title">
+              <a href="#">Mental Health</a>
+            </h4>
+            <p class="card-text">Whether you’re looking to lose weight, reduce stress, or simply clear your head and get
+              out into nature, cycling delivers almost immediate rewards.</p>
           </div>
         </div>
       </div>
