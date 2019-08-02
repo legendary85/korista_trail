@@ -21,13 +21,13 @@
 
 <body>
   <!-- Navbar -->
-  <nav id="top-nav" class="navbar navbar-expand-lg navbar-light">
+  <nav id="top-nav" class="navbar navbar-expand-lg navbar-light sticky-top">
     <a class="navbar-brand" href="#">Kt</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="collapse navbar-collapse" id="navbarNav"> 
       <ul class="navbar-nav">
         <li class="nav-item active">
           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
@@ -52,92 +52,101 @@
         <div class="col-sm-6">
           <h1 id="logo" class="display-4">Korista Trails!</h1>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-            Letraset sheets containing Lorem
+            The benefits of cycling are almost as endless as the country lanes you could soon be exploring. If you’re
+            considering taking up cycling, and weighing it up against other potential activities, then we’re here to
+            tell you that cycling is hands down the best option! And now it's easier than ever to find the nearest trail using our app!
           </p>
 
+          <form class="form-inline">
+            <!-- <h3>Zip Code</h3><span id="error"></span> -->
+            <input id="zip-code" class="form-control mr-sm-2" type="search" placeholder="Enter zip code" aria-label="Search">
+            <button id="zip-btn" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+
         </div>
+      </div>
+    </div>
+    <!-- Search Bar -->
+
+    <div class="col-sm-6">
+  
+    
+
+    </div>
+
+  
+  </div>
+
+  
+
+  <!--weather div for API 1-->
+
+  <div id="openweathermap-widget-15"></div>
+  <!--weather div for API 2-->
+
+  <div class="weather">
+
+    <div class="card mt-5 mb-5">
+      <h2 class="card-header text-center">Today's Weather!</h2>
+      <div class="card-body">
+
+        <table class="table bg-gradient-dark">
+
+          <tbody>
+            <tr>
+              <th scope="row"></th>
+              <td class="city font-weight-bold"> City:</td>
+              <td class="cityplaceholder">--</td>
+              <td class="temp font-weight-bold"> Temperature:</td>
+              <td class="tempplaceholder">--</td>
+
+            </tr>
+            <tr>
+              <th scope="row"></th>
+
+              <td class="desc font-weight-bold">Description:</td>
+              <td class="descplaceholder text-capitalize">--</td>
+              <td class="maxtemp font-weight-bold"> Max Temp:</td>
+              <td class="maxtempPH">--</td>
+
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row"></th>
+              <td class="wind font-weight-bold">Wind speed:</td>
+              <td class="windPH">--</td>
+              <td class="humidity font-weight-bold"> Humidity:</td>
+              <td class="humidityPH">--</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row"></th>
+              <td class="rise font-weight-bold">Sunrise:</td>
+              <td class="risePH">--</td>
+              <td class="set font-weight-bold"> Sunset:</td>
+              <td class="setPH">--</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+
+
+      </div>
+    </div>
+
+
+  </div>
+
+  <div id="trail" class="container">
+    <div class="card mt-5 mb-5">
+      <h5 class="card-header text-center">Hiking Trails within 20 Miles</h5>
+      <div id="trailHeader">
       </div>
     </div>
   </div>
 
-  <!-- Search Bar -->
-  <nav class="navbar navbar-light bg-light">
-    <form class="form-inline">
-      <h3>Zip Code</h3><span id="error"></span>
-      <input id="zip-code" class="form-control mr-sm-2" type="search" placeholder="Enter zip code" aria-label="Search">
-      <button id="zip-btn" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </nav>
 
-  <!--weather div for API-->
-
-    <div class="weather">
-
-      <div class="card mt-5 mb-5">
-        <h5 class="card-header text-center">Today's Weather!</h5>
-        <div class="card-body">
-
-          <table class="table">
-
-            <tbody>
-              <tr>
-                <th scope="row"></th>
-                <td class="city font-weight-bold"> City:</td>
-                <td class="cityplaceholder">--</td>
-                <td class="temp font-weight-bold"> Temperature:</td>
-                <td class="tempplaceholder">--</td>
-
-              </tr>
-              <tr>
-                <th scope="row"></th>
-
-                <td class="desc font-weight-bold">Description:</td>
-                <td class="descplaceholder text-capitalize">--</td>
-                <td class="maxtemp font-weight-bold"> Max Temp:</td>
-                <td class="maxtempPH">--</td>
-
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row"></th>
-                <td class="wind font-weight-bold">Wind speed:</td>
-                <td class="windPH">--</td>
-                <td class="humidity font-weight-bold"> Humidity:</td>
-                <td class="humidityPH">--</td>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row"></th>
-                <td class="rise font-weight-bold">Sunrise:</td>
-                <td class="risePH">--</td>
-                <td class="set font-weight-bold"> Sunset:</td>
-                <td class="setPH">--</td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
-
-
-        </div>
-      </div>
-
-
-    </div>
-    
-    <div id="trail" class="container">
-        <div class="card mt-5 mb-5">
-            <h5 class="card-header text-center">Hiking Trails within 20 Miles</h5>
-            <div id="trailHeader">
-            </div>
-        </div>
-    </div>
-
-
-    <!-- <div id="latlon">
+  <!-- <div id="latlon">
       <table class="tabledos">
 
         <tbody>
@@ -155,34 +164,36 @@
     </div> -->
 
 
-  
 
 
-    <!--Other area -->
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 mb-4">
-          <div class="other">Beginner Tips</div>
-          <div class="iframe-container">
+
+  <!--Other area -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 mb-4">
+        <div class="other">Beginner Tips</div>
+        <div class="iframe-container">
           <!--beginner tips youtube video -->
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/4ssLDk1eX9w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            
-          </div>
-        </div>
-        <div class="col-lg-6 mb-4">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/4ssLDk1eX9w" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-          <div id="other2">Map of your current area
-            <div class="otherImageHolder2">
-              <!-- BEGIN Hiking Project -->
-<iframe style="width:100%; max-width:1200px; height:340px;" frameborder="0" scrolling="no" src="https://www.hikingproject.com/widget/map?favs=1&location=ip&x=-10757013&y=3871157&z=6.1&h=400"></iframe>
-<!-- END Hiking Project -->
-              <!-- <img src="/assets/images/Screen Shot 2019-07-30 at 5.43.10 PM.png" alt=""> -->
-            </div>
+        </div>
+      </div>
+      <div class="col-lg-6 mb-4">
+
+        <div id="other2">Map of your current area
+          <div class="otherImageHolder2">
+            <!-- BEGIN Hiking Project -->
+            <iframe style="width:100%; max-width:1200px; height:340px;" frameborder="0" scrolling="no"
+              src="https://www.hikingproject.com/widget/map?favs=1&location=ip&x=-10757013&y=3871157&z=6.1&h=400"></iframe>
+            <!-- END Hiking Project -->
+            <!-- <img src="/assets/images/Screen Shot 2019-07-30 at 5.43.10 PM.png" alt=""> -->
           </div>
         </div>
       </div>
     </div>
-    <div class="container">
+  </div>
+  <div class="container">
     <!-- Page Heading -->
     <h1 class="my-4">Page Heading
       <small>Secondary Text</small>
@@ -215,25 +226,25 @@
       </div>
     </div>
   </div>
-  <br> 
-      
-      <!-- <footer> -->
-    <div class="card">
-      <div class="card-body footer">
-        <blockquote class="blockquote mb-0">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-          <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-        </blockquote>
-      </div>
+  <br>
+
+  <!-- <footer> -->
+  <div class="card">
+    <div class="card-body footer">
+      <blockquote class="blockquote mb-0">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+      </blockquote>
     </div>
-    </footer>
+  </div>
+  </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="assets/javascript/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="assets/javascript/script.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
-    <script src="assets/javascript/hiking.js"></script>
+  <script src="assets/javascript/hiking.js"></script>
 
 
 </body>
