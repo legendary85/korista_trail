@@ -1,20 +1,31 @@
 
+body{
+    height: 100%;
 
+}
 
+/* navbar styling */
  #top-nav {
     background: #313131;
     /* position: fixed;  */
     width: 100%;
     z-index:10 ; 
 }
+
 a {
     color: #fff !important;
 }
+
 a:hover {
     color: green !important;
 
 }
 
+#logo {
+    color: #fff;
+}
+
+/* jumbotron styling */
 .jumbotron {
     position: relative;
     background:linear-gradient(rgba(0, 0, 0, 0.185), rgba(0, 0, 0, 0.144)), url("../images/image2.png") top center;
@@ -25,9 +36,6 @@ a:hover {
     
 }
 
-#logo {
-    color: #fff;
-}
 
 .card-body {
     background: #313131 !important;
@@ -45,15 +53,12 @@ img{
 }
 
   
-body{
-    height: 100%;
-
-}
 
 .imagClass{
     width: 70%;
+    height:50%;
 } 
-
+/* yotube video (responsive) */
 .iframe-container{
     position: relative;
     width: 100%;
@@ -67,6 +72,7 @@ body{
     width: 100%;
     height: 100%;
   }
+
 
   #head-container{
       margin-top: 50px;
