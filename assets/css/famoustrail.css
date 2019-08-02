@@ -1,3 +1,4 @@
+/* header background image is set with white text */
 .jumbotron {
     background:url("../images/nicolas-cool-_Ojb8Te7tyI-unsplash.jpg");
     background-position: center;
@@ -5,7 +6,12 @@
     color: white;
     margin-top: -10px;
 }
-
-#jmtImg {
+/* thumbnail images width and height set */
+.img-thumbnail {
     height: 260px;
+    width: 260px;
+}
+/* footer text color white */
+.fa {
+    color: white;
 }

@@ -5,16 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- link to css meyer reset file -->
     <link rel="stylesheet" href="../assets/css/reset.css">
+    <!-- link to bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- link to famoustrail css file -->
     <link rel="stylesheet" href="../assets/css/famoustrail.css">
+    <!-- link to font-awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
 
     <title>Famous Trails</title>
 </head>
 
 <body>
+    <!-- nab bar with Home, Famous Trails, Video topics to choose -->
     <nav id="top-nav" class="h5 navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <a class="navbar-brand" href="#">Kt</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -30,7 +38,7 @@
                     <a class="nav-link text-white" href="#">Famous Trails</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Photos</a>
+                    <a class="nav-link" href="/assets/video.html">Videos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled text-white" href="#">Disabled</a>
@@ -38,17 +46,19 @@
             </ul>
         </div>
     </nav>
-
+    <!-- header of the page -->
     <div class="jumbotron">
         <h1 class="text-center display-4">Famous Trails</h1>
         <p class="text-center lead">A collection of trails that are worth trying</p>
     </div>
-
+    <!-- container holding all images and texts -->
     <div class="container bg-dark">
         <div class="row">
+            <!-- image map of Pacific Crest Trail -->
             <div class="col-3">
                 <img class="img-thumbnail" src="../assets/images/pctmap.jpg" alt="Map of the Pacific Crest Trail">
             </div>
+            <!-- text information on Pacific Crest Trail -->
             <div class="col-6 text-white text-center">
                 <p class="h3">Location: Campo, California</p>
                 <p class="h5">Trail Name: Pacific Crest Trail</p>
@@ -59,8 +69,9 @@
                     1993. It received official status under the National Trails System Act of 1968.
                 </p>
             </div>
+            <!-- image landscape of Pacific Crest Trail -->
             <div class="col-3">
-                <img class="img-thumbnail" src="../assets/images/pctimg.jpg" alt="Picture of the Pacific Crest Trail">
+                <img class="img-thumbnail" src="../assets/images/pctimg.jpg" alt="Landscape of the Pacific Crest Trail">
             </div>
         </div>
 
@@ -68,20 +79,26 @@
 
     <div class="container mt-4 bg-dark">
         <div class="row">
+            <!-- image map of the John Muir Trail -->
             <div class="col-3">
-                <img class="img-thumbnail" src="../assets/images/jmtmap.png" alt="Map of the Pacific Crest Trail">
+                <img class="img-thumbnail" src="../assets/images/jmtmap.png" alt="Map of John Muir Trail">
             </div>
+            <!-- text information on John Muir Trail -->
             <div class="col-6 text-white text-center">
                 <p class="h3">Location: Yosemite National Park, California</p>
                 <p class="h5">Trail Name: John Muir Trail</p>
                 <p class="h5">Trail Length: 213 Miles</p>
-                <p class="h5">History: This trail starts in Yosemite National Park and ends at the summet of Mount Whitney, California.
-                    The trail passes through large swaths of alpine and high mountain scenery with 1,500 thru-hiking attempts each year.
-                    
+                <p class="h6">History: The trail is named in honor of a Scottish-American environmentalist John Muir.
+                    Construction of the trail began in 1915 and completed in 1938. This trail starts in Yosemite
+                    National Park and ends at the summet of Mount Whitney, California.
+                    The trail passes through large swaths of alpine and high mountain scenery with 1,500 thru-hiking
+                    attempts each year.
                 </p>
             </div>
+            <!-- image landscape of John Muir Trail -->
             <div class="col-3">
-                <img id="jmtImg" class="img-thumbnail" src="../assets/images/jmtimg.jpg" alt="Picture of the Pacific Crest Trail">
+                <img class="img-thumbnail" src="../assets/images/jmtimg.jpg"
+                    alt="Landscape of the John Muir Trail">
             </div>
         </div>
 
@@ -89,48 +106,65 @@
 
     <div class="container mt-4 bg-dark">
         <div class="row">
+            <!-- image map of Continental Divide Trail -->
             <div class="col-3">
-                <img class="img-thumbnail" src="../assets/images/pctmap.jpg" alt="Map of the Pacific Crest Trail">
+                <img class="img-thumbnail" src="../assets/images/cdtmap.jpg" alt="Map of Continental Divide Trail">
             </div>
+            <!-- text information on Continental Divide Trail -->
             <div class="col-6 text-white text-center">
-                <p class="h3">Location: Campo, California</p>
-                <p class="h5">Trail Name: Pacific Crest Trail</p>
-                <p class="h5">Trail Length: 2,653 Miles</p>
-                <p class="h5">History: This trail crosses 3 states, starting in Campo, California and ends at Manning
-                    Park in British Columbia Canada-US border.
-                    It was designated a National Scenic Trail in 1968, although it was not officially completed until
-                    1993. It received official status under the National Trails System Act of 1968.
+                <p class="h3">Location: Glacier National Park, Montana</p>
+                <p class="h5">Trail Name: Continental Divide Trail</p>
+                <p class="h5">Trail Length: 3,100 Miles</p>
+                <p class="h5">History: The trail crosses 5 states Montana, Idaho, Wyoming, Colorado, and New Mexico. The
+                    trail takes about 6 months to complete. This trail along with the Appalachian Trail and Pacific
+                    Crest Trail form what hiker enthusiasts have termed the Triple Crown of long-distance hiking.
                 </p>
             </div>
+            <!-- image landscape of Continental Divide Trail -->
             <div class="col-3">
-                <img class="img-thumbnail" src="../assets/images/pctimg.jpg" alt="Picture of the Pacific Crest Trail">
+                <img class="img-thumbnail" src="../assets/images/cdtimg.jpg" alt="Landscape of the Continental Divide Trail">
             </div>
         </div>
 
     </div>
 
-    <div class="container mt-4 bg-dark">
+    <div class="container mt-4 mb-3 bg-dark">
         <div class="row">
+            <!-- image map of Appalachian Trail -->
             <div class="col-3">
-                <img class="img-thumbnail" src="../assets/images/pctmap.jpg" alt="Map of the Pacific Crest Trail">
+                <img class="img-thumbnail" src="../assets/images/aptmap.png" alt="Map of Appalachian Trail">
             </div>
+            <!-- text information on Appalachian Trail -->
             <div class="col-6 text-white text-center">
-                <p class="h3">Location: Campo, California</p>
-                <p class="h5">Trail Name: Pacific Crest Trail</p>
-                <p class="h5">Trail Length: 2,653 Miles</p>
-                <p class="h5">History: This trail crosses 3 states, starting in Campo, California and ends at Manning
-                    Park in British Columbia Canada-US border.
-                    It was designated a National Scenic Trail in 1968, although it was not officially completed until
-                    1993. It received official status under the National Trails System Act of 1968.
+                <p class="h3">Location: Springer Mountain, Georgia</p>
+                <p class="h5">Trail Name: Appalachian Trail</p>
+                <p class="h5">Trail Length: 2,200</p>
+                <p class="h5">History: Also known as A.T., the trail idea came about in 1921.  the trail was completed in 1937 and is maintained by 31 trail clubs and multiple partnerships.  The trail passes through 14 states from Georgia leading to Maine.
                 </p>
             </div>
+            <!-- image landscape of Appalachian Trail -->
             <div class="col-3">
-                <img class="img-thumbnail" src="../assets/images/pctimg.jpg" alt="Picture of the Pacific Crest Trail">
+                <img class="img-thumbnail" src="../assets/images/aptimg.jpeg" alt="Landscape of Appalachian Trail">
             </div>
         </div>
 
     </div>
 
+    <!-- <footer> -->
+        <footer>
+            <div class="card">
+              <div class="text-center bg-dark text-white card-body footer">
+                <div class="container">
+                  <a href="https://github.com/legendary85/korista_trail" target="_blank">
+                    <i class="fa fa-github" style="font-size:36px"></i>
+      
+                  </a>
+                  <p class="coded-by">Coded by: Korista Tech Solutions</p>
+                </div>
+      
+              </div>
+            </div>
+          </footer>
 
 </body>
 
