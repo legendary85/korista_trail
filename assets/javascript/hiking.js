@@ -11,9 +11,11 @@ $(document).ready(function () {
         //variables to store the weather API key, zipcode to use in ajax url
         var zipcode = $('#zip-code').val().trim()
 
+
         var APIkey = 'fb0ce6d825db30974bf096625bf170a2';
 
         var weatherURL = 'https://api.openweathermap.org/data/2.5/weather?zip=' + zipcode + ',us&APPID=' + APIkey;
+
 
         //using weatherURL variable for url:
         $.ajax({
