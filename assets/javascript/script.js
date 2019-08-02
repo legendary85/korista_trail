@@ -1,14 +1,19 @@
 $(document).ready(function () {
 
     $('.weather').hide()
-    $('.tabledos').hide()
-
-
+    $('.tabledos').hide()    
     // $(document).on("click", "#zip-btn", function (e) {
     //     e.preventDefault();
     //     $.scrollTo('.weather', 2000);
     // });
     
+
+    //hide weather table after rendered
+    $('#hide').on('click',function(check){
+        check.preventDefault();
+        $('.weather').hide();
+    })
+
 
 
 
@@ -205,17 +210,9 @@ $(document).ready(function () {
             // window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 15,cityid: '4684888',appid: 'fb0ce6d825db30974bf096625bf170a2',units: 'metric',containerid: 'openweathermap-widget-15',  });  
             // (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
             // var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();
-
-
-
         })
-
-
-
     })
-
-    
-
+   
 
 
    
