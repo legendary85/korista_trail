@@ -14,6 +14,13 @@
 
     <title>Korista Trails - MeetUps</title>
 
+    <style type="text/css">
+
+   
+
+
+    </style>
+
 
 </head>
 <body>
@@ -55,16 +62,17 @@
 
     <div class="card">
             <div class="card-header">
-              <h5>My new friends:</h5>
+              <h5>Cycling friends:</h5>
             </div>
             <div class="card-body">
                     <table class="table">
                             <thead>
                               <tr>
-                                <th scope="col">Zip Code</th>
+                                
                                 <th scope="col">Name</th>
                                 <th scope="col">Phone Number</th>                            
                                 <th scope="col">Trail Name</th>
+                                <th scope="col">Zip Code</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -78,11 +86,7 @@
                 <h5 class="card-header">Add a new friend!</h5>
                 <div class="card-body">
                         <form>
-                                <div class="form-group">
-                                  <label for="trainNameInput">Zip Code</label>
-                                  <input type="text" class="form-control" id="trainNameInput" aria-describedby="textHelp" placeholder="Enter your current zip code">
-                                  <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-                                </div>
+                                
                                 <div class="form-group">
                                   <label for="destinationInput">Name</label>
                                   <input type="text" class="form-control" id="destinationInput" placeholder="Enter name here">
@@ -95,6 +99,12 @@
                                         <label for="freqInput">Trail Name</label>
                                         <input type="text" class="form-control" id="freqInput" placeholder="Enter trail name">
                                     </div>
+
+                                    <div class="form-group">
+                                            <label for="trainNameInput">Zip Code</label>
+                                            <input type="text" class="form-control" id="trainNameInput" aria-describedby="textHelp" placeholder="Enter your current zip code">
+                                            
+                                          </div>
                                 <button type="submit" class="btn btn-primary">Submit</button>
                               </form>
                   
@@ -115,6 +125,97 @@
 
 
     <script> 
+    var firebaseConfig = {
+    apiKey: "AIzaSyBbvYYY4We8ajbVhgTv1KRjd7x071Y-k8w",
+    authDomain: "cycling-social.firebaseapp.com",
+    databaseURL: "https://cycling-social.firebaseio.com",
+    projectId: "cycling-social",
+    storageBucket: "",
+    messagingSenderId: "728012846053",
+    appId: "1:728012846053:web:f050ca45f50862cd"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  var firebase = firebase.database();
+
+
+//on-click to register train/////////////
+  $('.btn').on('click', function(event){
+      event.preventDefault()
+
+   //gather tain form input data/////////////////
+      Tname = $('#trainNameInput').val().trim()     //zipcode
+      Tdesti = $('#destinationInput').val().trim() //name
+      Ttime = $('#timeInput').val().trim()
+      Tfreq= $('#freqInput').val().trim()
+
+        
+      console.log(Tname)
+      console.log(Tdesti)
+      console.log(Ttime)
+      console.log(Tfreq)
+
+
+    ///push data to firebase/////////////////////
+
+     firebase.ref().push({
+          Tname: Tname,
+          Tdesti: Tdesti,
+          Ttime: Ttime,
+          Tfreq: Tfreq
+      })
+
+      //empty input after click////////////////
+
+      $('.form-control').val('');
+      
+  })
+
+
+//lister for each child added/////////////////////////
+firebase.ref().on('child_added', function(snapshot){
+    var Tname = snapshot.val().Tname
+    var Tdesti = snapshot.val().Tdesti
+    var Ttime = snapshot.val().Ttime
+    var Tfreq = snapshot.val().Tfreq
+
+
+    // var convertedTime = moment(Ttime,'HH:mm');
+
+    //   console.log( convertedTime);
+
+    //   var currentTime = moment();
+
+    //   var timeDiff = currentTime.diff(moment(convertedTime),"minutes");
+    //   console.log(timeDiff)
+    //   var timeRemainder = timeDiff % Tfreq;
+    //   var mnsBeforeNext = Tfreq - timeRemainder;
+    //   var tNext = moment().add(mnsBeforeNext, 'minutes');
+
+      
+      
+    //   var nextArrival = tNext.format("HH:mm")
+
+    var row = $('<tr>')
+
+    row.append(
+        
+        $('<td>').text(Tdesti),        
+        $('<td>').text(Ttime),
+        $('<td>').text(Tfreq),
+        $('<td>').text(Tname),
+        // $('<td>').text(mnsBeforeNext),
+
+    )
+
+    ///append data/////////////////
+
+
+    $('tbody').append(row)
+})
+
+
     
     </script>
 
