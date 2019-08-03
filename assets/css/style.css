@@ -6,7 +6,7 @@
 .main-text
 {
     position: absolute;
-    top: 75px;
+    top: 150px;
     width: 96.66666666666666%;
     color: #FFF;
 }
@@ -98,6 +98,10 @@
       margin-bottom: 10px;
   }
 
+  #btn-pad-left{
+    scroll-padding-right: 0;
+  }
+
 
 /* buttons */
   #zip-btn{
@@ -107,12 +111,15 @@
   }
 
   #hide{
+    text-align: center;
+    margin-left:50px;
     background-color: #fd6031;
     color: black;
     border: none;
   }
 
   .main-para{
+      text-align: left;
       font-size: 20px;
   }
 
@@ -139,6 +146,8 @@
   #cont-video {
     text-align: center;
 }
+
+
 
 @media only screen and (max-width: 600px) {
   .main-text{
