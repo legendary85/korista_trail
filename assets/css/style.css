@@ -168,13 +168,22 @@
   bottom: 1rem;
 } */
 
-.mainwid{
+#widget{
   position: absolute;
   margin-top: 10px;
   margin-left: 10px;
+  z-index: 30;
 
 
 }
+/* .mainwid{
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 10px;
+  z-index: 30;
+
+
+} */
 
 .stickThat{
   position: fixed;
@@ -207,4 +216,24 @@
  }
 
 }
+
+/* @media only screen and (max-width: 375px){
+
+  .mainwid{
+    position: static;
+    margin-top: 10px;
+    margin-left: 10px;
+    z-index: 0;
+  
+  
+  }
+  
+  .stickThat{
+    position: relative;
+    top: 60px;
+    
+    z-index: 0;
+  }
+
+} */
 
