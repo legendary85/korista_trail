@@ -14,14 +14,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
  
 <!-- added a favicon -->
-  <link href="/assets/images/favicon.ico" rel="icon" type="image/x-icon" />
+  <link href="assets/images/favicon.ico" rel="icon" type="image/x-icon" />
   
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.js"></script>
-  <title>Korista Trails</title>
+  <title>Korista Trails - Home</title>
 </head>
 
 <body>
@@ -38,10 +38,10 @@
           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/assets/famoustrails.html">Famous Trails</a>
+          <a class="nav-link" href="famoustrails.html">Famous Trails</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/assets/video.html">Videos</a>
+          <a class="nav-link" href="video.html">Videos</a>
         </li>
         <li class="nav-item">
           <a class="nav-link disabled" href="#">Disabled</a>
@@ -79,13 +79,13 @@
   <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active" data-interval="5000">
-            <img id="carosel-img" src="/assets/images/image2.png" class="d-block w-100" alt="...">
+            <img id="carosel-img" src="assets/images/image2.png" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item" data-interval="5000">
-            <img id="carosel-img" src="/assets/images/image1.png" class="d-block w-100" alt="...">
+            <img id="carosel-img" src="assets/images/image1.png" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item" data-interval="5000">
-            <img id="carosel-img" src="/assets/images/image3.png" class="d-block w-100" alt="...">
+            <img id="carosel-img" src="assets/images/image3.png" class="d-block w-100" alt="...">
           </div>
           <div class="sticky-top">
           </div>
@@ -101,6 +101,8 @@
       </div>
       <br>
       <div class="main-text hidden-xs">
+        <div class="row">
+          <div class="col-2"></div>
           <div class="col-md-6  col-sm-12 text-center">
               <h1 id="logo" class="display-4">Korista Trails!</h1>
               <p class="main-para">
@@ -110,12 +112,15 @@
                 using our app!
               </p> 
               <form class="form-inline">
-                  <h3 id="zip-c">Zip Code</h3><span id="error"></span>
+                  <h3 id="zip-c"></h3><span id="error"></span>
                   <input id="zip-code" class="form-control mr-sm-2" type="search" placeholder="Enter zip code"
                     aria-label="Search">
                   <button id="zip-btn" class="btn" type="submit">Search</button>
                 </form>
           </div>
+          <div class="col-4"></div>
+          
+        </div>
       </div>
   </div>
 </div>
@@ -199,9 +204,15 @@
               </tr>
             </tbody>
           </table>
-          <button type="button" id="hide" class="btn btn-success">Hide</button>
-
-
+          <div class="container">
+          <div class="row">
+            <div id="btn-pad-left" class="col-lg-5"></div>
+            <div class="col-lg-7">
+            <button type="button" id="hide" class="btn btn-success">Hide</button>
+          </div>
+          <div class="col"></div>
+          </div>
+        </div>
 
         </div>
       </div>
@@ -288,7 +299,7 @@
         <div class="col-lg-6 mb-4">
           <div class="card h-100">
             <div id="results"></div>
-            <a href="#"><img id="image" class="card-img-top" src="/assets/images/image1.png" alt=""></a>
+            <a href="#"><img id="image" class="card-img-top" src="assets/images/image1.png" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
                 <a href="#">Mental Health</a>
