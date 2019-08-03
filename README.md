@@ -55,6 +55,8 @@ There is a *Home*, *Famous Trails*, *Videos*, and *Meetups* links at the top nav
 
 #### Sample Screenshot of the application
 
+![Screenshot of the application](assets/images/SSreadme.png)
+
 # Resources
 
 API used: [Hiking Project](https://www.hikingproject.com/), [Open Weather Map](https://openweathermap.org/)
@@ -63,6 +65,6 @@ Library used: [JQuery](https://jquery.com/), [Momentjs](https://momentjs.com/), 
 
 ## Contributers
 
-* [legendary85](https://github.com/legendary85)
-* [seleazar10](https://github.com/seleazar10)
-* [Runexz](https://github.com/Runexz)
+* [Kourtney McCullough](https://github.com/legendary85)
+* [Stama Eleazar](https://github.com/seleazar10)
+* [Ricardo Rodriguez](https://github.com/Runexz)
