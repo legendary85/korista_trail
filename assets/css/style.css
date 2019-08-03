@@ -6,7 +6,7 @@
 .main-text
 {
     position: absolute;
-    top: 50px;
+    top: 75px;
     width: 96.66666666666666%;
     color: #FFF;
 }
@@ -35,7 +35,7 @@
 /* jumbotron styling */
   .jumbotron {
     position: relative;
-    background:linear-gradient(rgba(0, 0, 0, 0.185), rgba(0, 0, 0, 0.144)), url("../images/image2.png") top center;
+    background:linear-gradient(rgba(0, 0, 0, 0.185), rgba(0, 0, 0, 0.144)), url("../images/nicolas-cool-_Ojb8Te7tyI-unsplash.jpg") top center;
     background-size: cover;
     padding-top: 10em;
     padding-bottom:22em; 
@@ -141,6 +141,9 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .main-text{
+   top: 75px;
+}
  
   .main-para{
     display: none;  
