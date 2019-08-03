@@ -98,6 +98,21 @@
       margin-bottom: 10px;
   }
 
+  #head-container{
+      margin-top: 50px;
+      text-align: center;
+  }
+
+  #video-container{
+      width: 100%;
+      margin-top: 50px;
+  }
+
+  .col-sm-6{
+      margin-bottom: 10px;
+  }
+
+
   #btn-pad-left{
     scroll-padding-right: 0;
   }
@@ -169,6 +184,7 @@
 }
 
 
+
 @media only screen and (max-width: 600px) {
   .main-text{
    top: 75px;
@@ -190,12 +206,5 @@
    display: block;
  }
 
- /* .weather{
-  display: none;
-} */
-
 }
-
-
-
 
