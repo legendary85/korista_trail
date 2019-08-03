@@ -3,7 +3,6 @@
 This application provides the user who wants to take an interest in **hiking or biking trails** with information and advice to help them make the best approach.
 
 
-
 ## Search trails near you.
 
 You can enter your zip code and the application will retrieve weather information and trails within a 20 mile radius.
