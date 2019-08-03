@@ -98,6 +98,21 @@
       margin-bottom: 10px;
   }
 
+  #head-container{
+      margin-top: 50px;
+      text-align: center;
+  }
+
+  #video-container{
+      width: 100%;
+      margin-top: 50px;
+  }
+
+  .col-sm-6{
+      margin-bottom: 10px;
+  }
+
+
   #btn-pad-left{
     scroll-padding-right: 0;
   }
@@ -145,6 +160,27 @@
 }
   #cont-video {
     text-align: center;
+}
+
+/* #openweathermap-widget-12{
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 1rem;
+} */
+
+.mainwid{
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 10px;
+
+
+}
+
+.stickThat{
+  position: fixed;
+  top: 60px;
+  
+  z-index: 1000;
 }
 
 
