@@ -2,18 +2,25 @@ $(document).ready(function () {
 
     $('.weather').hide()
     $('.tabledos').hide()
-
-
     // $(document).on("click", "#zip-btn", function (e) {
     //     e.preventDefault();
     //     $.scrollTo('.weather', 2000);
     // });
-    
+
+
+    //hide weather table after rendered
+    $('#hide').on('click', function (check) {
+        check.preventDefault();
+        $('.weather').hide();
+    })
+
 
 
 
     $('#zip-btn').on('click', function (check) {
         check.preventDefault()
+
+    
 
 
 
@@ -41,7 +48,7 @@ $(document).ready(function () {
             // city///////////////////////////////////////////////
             console.log(weather)
 
-            
+
 
 
             var cityId = weather.sys.id
@@ -172,7 +179,7 @@ $(document).ready(function () {
             var gifURL = "https://api.giphy.com/v1/gifs/search?q=" +
                 search + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
 
-                
+
 
             $.ajax({
                 url: gifURL,
@@ -200,24 +207,27 @@ $(document).ready(function () {
             // display weather card///////////////////////////////////////
             $('.weather').show()
 
+            $('#weatherwid').hide()
+
 
 
             // window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 15,cityid: '4684888',appid: 'fb0ce6d825db30974bf096625bf170a2',units: 'metric',containerid: 'openweathermap-widget-15',  });  
             // (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
             // var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();
 
-
-
         })
-
-
-
     })
 
-    
+
+    //weather widget////////////////////////////
+
+window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 12,cityid: '4684888',appid: 'fb0ce6d825db30974bf096625bf170a2',units: 'metric',containerid: 'openweathermap-widget-12',  });  (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();
 
 
+    // window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = []; window.myWidgetParam.push({ id: 15, cityid: '2643743', appid: 'fb0ce6d825db30974bf096625bf170a2', units: 'metric', containerid: 'openweathermap-widget-15', }); (function () { var script = document.createElement('script'); script.async = true; script.charset = "utf-8"; script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js"; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s); })();
 
-   
+
+    // window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = []; window.myWidgetParam.push({ id: 11, cityid: '4684888', appid: 'fb0ce6d825db30974bf096625bf170a2', units: 'metric', containerid: 'openweathermap-widget-11', }); (function () { var script = document.createElement('script'); script.async = true; script.charset = "utf-8"; script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js"; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s); })();
+
 })
 
