@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- <link rel="stylesheet" type="text/css" href="assets/css/style.css"> -->
 
@@ -16,209 +17,334 @@
 
     <style type="text/css">
 
-   
+
 
 
     </style>
 
 
 </head>
+
 <body>
 
     <!-- Navbar -->
     <nav id="top-nav" class="navbar navbar-expand-lg navbar-light sticky-top">
-            <a class="navbar-brand" href="#">Kt</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
+        <a class="navbar-brand" href="#">Kt</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
                 <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="famoustrails.html">Famous Trails</a>
+                    <a class="nav-link" href="famoustrails.html">Famous Trails</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="video.html">Videos</a>
+                    <a class="nav-link" href="video.html">Videos</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="meetUps.html">Meet-Ups</a>
+                    <a class="nav-link" href="meetUps.html">Meet-Ups</a>
                 </li>
-              </ul>
-            </div>
-          </nav>
+            </ul>
+        </div>
+    </nav>
 
 
 
 
-    
+
     <div class="jumbotron">
-            <h1 class='text-center'>Cycling Meet Ups</h1>
+        <h1 class='text-center'>Cycling Meet Ups</h1>
     </div>
 
     <div class="container">
 
-    <div class="card">
+        <div class="card">
             <div class="card-header">
-              <h5>Cycling friends:</h5>
+                <h5>Record</h5>
             </div>
             <div class="card-body">
-                    <table class="table">
-                            <thead>
-                              <tr>
-                                
-                                <th scope="col">Name</th>
-                                <th scope="col">Phone Number</th>                            
-                                <th scope="col">Trail Name</th>
-                                <th scope="col">Zip Code</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              
-                            </tbody>
-                          </table>
+                <table class="table">
+                    <thead>
+                        <tr>
+
+                            <th scope="col">Trail Name</th>
+                            <th scope="col">Miles</th>
+                            <th scope="col">Started</th>
+                            <th scope="col">Ended</th>
+                            <th scope="col">Time Taken</th>
+                            <th scope="col">Avg. Speed</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
             </div>
-          </div>
+        </div>
 
-          <div class="card mt-4">
-                <h5 class="card-header">Add a new friend!</h5>
-                <div class="card-body">
-                        <form>
-                                
-                                <div class="form-group">
-                                  <label for="destinationInput">Name</label>
-                                  <input type="text" class="form-control" id="destinationInput" placeholder="Enter name here">
-                                </div>
-                                <div class="form-group">
-                                        <label for="timeInput">Phone Number</label>
-                                        <input type="text" class="form-control" id="timeInput" placeholder="Enter the phone number">
-                                    </div>
-                                <div class="form-group">
-                                        <label for="freqInput">Trail Name</label>
-                                        <input type="text" class="form-control" id="freqInput" placeholder="Enter trail name">
-                                    </div>
+        <div class="card mt-4">
+            <h5 class="card-header">Latest Activity</h5>
+            <div class="card-body">
+                <form>
 
-                                    <div class="form-group">
-                                            <label for="trainNameInput">Zip Code</label>
-                                            <input type="text" class="form-control" id="trainNameInput" aria-describedby="textHelp" placeholder="Enter your current zip code">
-                                            
-                                          </div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                              </form>
-                  
-                </div>
-              </div>
+                    <div class="form-group">
+                        <label for="destinationInput">Trail name</label>
+                        <input type="text" class="form-control" id="destinationInput" placeholder="Enter name here">
+                    </div>
+                    <div class="form-group">
+                        <label for="timeInput">Miles ran:</label>
+                        <input type="text" class="form-control" id="timeInput"
+                            placeholder="How many miles did you run?">
+                    </div>
+                    <div class="form-group">
+                        <label for="freqInput">Time started:</label>
+                        <input type="text" class="form-control" id="freqInput"
+                            placeholder="(HH:mm) Enter time using military slyte">
+                    </div>
+                    <div class="form-group">
+                        <label for="freqInputDos">Time ended:</label>
+                        <input type="text" class="form-control" id="freqInputDos"
+                            placeholder="(HH:mm) Enter time using military slyte ">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="trainNameInput">Zip Code</label>
+                        <input type="text" class="form-control" id="trainNameInput" aria-describedby="textHelp"
+                            placeholder="Enter your current zip code">
+
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+
+            </div>
+        </div>
 
 
     </div>
 
-</div>
+    </div>
 
 
-     <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
-     
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
 
-    <script> 
-    var firebaseConfig = {
-    apiKey: "AIzaSyBbvYYY4We8ajbVhgTv1KRjd7x071Y-k8w",
-    authDomain: "cycling-social.firebaseapp.com",
-    databaseURL: "https://cycling-social.firebaseio.com",
-    projectId: "cycling-social",
-    storageBucket: "",
-    messagingSenderId: "728012846053",
-    appId: "1:728012846053:web:f050ca45f50862cd"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyBbvYYY4We8ajbVhgTv1KRjd7x071Y-k8w",
+            authDomain: "cycling-social.firebaseapp.com",
+            databaseURL: "https://cycling-social.firebaseio.com",
+            projectId: "cycling-social",
+            storageBucket: "",
+            messagingSenderId: "728012846053",
+            appId: "1:728012846053:web:f050ca45f50862cd"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
 
-  var firebase = firebase.database();
+        var firebase = firebase.database();
 
+        $('.btn').on('click', function (event) {
+            event.preventDefault()
 
-//on-click to register train/////////////
-  $('.btn').on('click', function(event){
-      event.preventDefault()
-
-   //gather tain form input data/////////////////
-      Tname = $('#trainNameInput').val().trim()     //zipcode
-      Tdesti = $('#destinationInput').val().trim() //name
-      Ttime = $('#timeInput').val().trim()
-      Tfreq= $('#freqInput').val().trim()
-
-        
-      console.log(Tname)
-      console.log(Tdesti)
-      console.log(Ttime)
-      console.log(Tfreq)
+            //gather tain form input data/////////////////
+            Tname = $('#trainNameInput').val().trim()     //zipcode
+            Tdesti = $('#destinationInput').val().trim() //name
+            Ttime = $('#timeInput').val().trim()  //miles
+            Tfreq = $('#freqInput').val().trim()  //time start
+            TfreqDos = $('#freqInputDos').val().trim()  //time end
 
 
-    ///push data to firebase/////////////////////
+            console.log(Tname) //zipcode
+            console.log(Tdesti) //trail name
+            console.log(Ttime) //miles
+            console.log(Tfreq) // time start
+            console.log(TfreqDos) //time end
 
-     firebase.ref().push({
-          Tname: Tname,
-          Tdesti: Tdesti,
-          Ttime: Ttime,
-          Tfreq: Tfreq
-      })
+            
 
-      //empty input after click////////////////
-
-      $('.form-control').val('');
-      
-  })
-
-
-//lister for each child added/////////////////////////
-firebase.ref().on('child_added', function(snapshot){
-    var Tname = snapshot.val().Tname
-    var Tdesti = snapshot.val().Tdesti
-    var Ttime = snapshot.val().Ttime
-    var Tfreq = snapshot.val().Tfreq
+            var start = moment.duration(Tfreq);
+            var end = moment.duration(TfreqDos);
+            var diff = end.subtract(start);
+            var hours = diff.hours(); // return hours
+            var mins = diff.minutes(); // return minutes
+            var timeTaken = (hours + ':' + mins) //Time Take
 
 
-    // var convertedTime = moment(Ttime,'HH:mm');
+            console.log(hours)
+            console.log(mins)
+            console.log(timeTaken)
 
-    //   console.log( convertedTime);
+            var hrsMins = hours * 60
+            console.log(hrsMins)
 
-    //   var currentTime = moment();
+            var allMins = hrsMins + mins
+            console.log(allMins)
+            console.log(Ttime)
 
-    //   var timeDiff = currentTime.diff(moment(convertedTime),"minutes");
-    //   console.log(timeDiff)
-    //   var timeRemainder = timeDiff % Tfreq;
-    //   var mnsBeforeNext = Tfreq - timeRemainder;
-    //   var tNext = moment().add(mnsBeforeNext, 'minutes');
-
-      
-      
-    //   var nextArrival = tNext.format("HH:mm")
-
-    var row = $('<tr>')
-
-    row.append(
-        
-        $('<td>').text(Tdesti),        
-        $('<td>').text(Ttime),
-        $('<td>').text(Tfreq),
-        $('<td>').text(Tname),
-        // $('<td>').text(mnsBeforeNext),
-
-    )
-
-    ///append data/////////////////
+            var avgSpeedMin = (Ttime / allMins)
+            var avgSpeedHr = avgSpeedMin*60;
+            var speedDecimal = avgSpeedHr.toFixed(2)
+            console.log(avgSpeedMin)
+            console.log(avgSpeedHr)
+            console.log(speedDecimal)
 
 
-    $('tbody').append(row)
-})
+            
+            var CurrentTime = moment().format("HH:mm")
+            console.log(CurrentTime)
+
+
+
+
+
+            ///push data to firebase/////////////////////
+
+            firebase.ref().push({
+                Tname: Tname, //zipcode
+                Tdesti: Tdesti, //trail name
+                Ttime: Ttime, //miles
+                Tfreq: Tfreq,  // time start
+                TfreqDos: TfreqDos, //time end
+                timeTaken: timeTaken, //time taken
+                speedDecimal: speedDecimal //avg speed
+            })
+
+            //empty input after click////////////////
+
+            $('.form-control').val('');
+
+        })
+
+
+        //lister for each child added/////////////////////////
+        firebase.ref().on('child_added', function (snapshot) {
+            var Tname = snapshot.val().Tname
+            var Tdesti = snapshot.val().Tdesti
+            var Ttime = snapshot.val().Ttime
+            var Tfreq = snapshot.val().Tfreq
+            var TfreqDos = snapshot.val().TfreqDos
+            var timeTaken = snapshot.val().timeTaken
+            var timeTaken = snapshot.val().timeTaken
+            var speedDecimal = snapshot.val().speedDecimal
 
 
     
+
+
+            var row = $('<tr>')
+                row.addClass('text-center')
+
+            row.append(
+
+                $('<td>').text(Tdesti),
+                $('<td>').text(Ttime + 'miles'),
+                $('<td>').text(Tfreq),
+                $('<td>').text(TfreqDos),
+                $('<td>').text(timeTaken ),
+                $('<td>').text(speedDecimal + ' mph')
+            
+
+            )
+
+            ///append data/////////////////
+
+
+            $('tbody').append(row)
+
+
+            //on-click to register train/////////////
+            //   $('.btn').on('click', function(event){
+            //       event.preventDefault()
+
+            //    //gather tain form input data/////////////////
+            //       Tname = $('#trainNameInput').val().trim()     //zipcode
+            //       Tdesti = $('#destinationInput').val().trim() //name
+            //       Ttime = $('#timeInput').val().trim()  //time started
+            //       Tfreq= $('#freqInput').val().trim()  //number of
+
+
+            //       console.log(Tname)
+            //       console.log(Tdesti)
+            //       console.log(Ttime)
+            //       console.log(Tfreq)
+
+
+            //     ///push data to firebase/////////////////////
+
+            //      firebase.ref().push({
+            //           Tname: Tname,
+            //           Tdesti: Tdesti,
+            //           Ttime: Ttime,
+            //           Tfreq: Tfreq
+            //       })
+
+            //       //empty input after click////////////////
+
+            //       $('.form-control').val('');
+
+            //   })
+
+
+            // //lister for each child added/////////////////////////
+            // firebase.ref().on('child_added', function(snapshot){
+            //     var Tname = snapshot.val().Tname
+            //     var Tdesti = snapshot.val().Tdesti
+            //     var Ttime = snapshot.val().Ttime
+            //     var Tfreq = snapshot.val().Tfreq
+
+
+            //     // var convertedTime = moment(Ttime,'HH:mm');
+
+            //     //   console.log( convertedTime);
+
+            //     //   var currentTime = moment();
+
+            //     //   console.log(currentTime)
+
+            //     //   var timeDiff = currentTime.diff(moment(convertedTime),"minutes");
+            //     //   console.log(timeDiff)
+            //     //   var timeRemainder = timeDiff % Tfreq;
+            //     //   var mnsBeforeNext = Tfreq - timeRemainder;
+            //     //   var tNext = moment().add(mnsBeforeNext, 'minutes');
+
+
+
+            //     //   var nextArrival = tNext.format("HH:mm")
+
+            //     var CurrentTime = moment().format("HH:mm")
+            //     console.log(CurrentTime)
+
+            //     var row = $('<tr>')
+
+            //     row.append(
+
+            //         $('<td>').text(Tdesti),        
+            //         $('<td>').text(Ttime),
+            //         $('<td>').text(Tfreq),
+            //         $('<td>').text(Tname),
+            //         // $('<td>').text(mnsBeforeNext),
+
+            //     )
+
+            //     ///append data/////////////////
+
+
+            //     $('tbody').append(row)
+        })
+
+
+
     </script>
 
 
 </body>
+
 </html>
