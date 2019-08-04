@@ -19,7 +19,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
-
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.js"></script>
   <title>Korista Trails - Home</title>
 </head>
@@ -79,7 +79,7 @@
       <div class="main-text hidden-xs">
         <div class="row">
           <div class="col-2"></div>
-          <div class="col-md-6  col-sm-12 text-center">
+          <div class="col-lg-6 col-md-8  col-sm-12 text-center">
               <h1 id="logo" class="display-4">Korista Trails!</h1>
               <p class="main-para">
                 The benefits of cycling are almost as endless as the country lanes you could soon be exploring. If you’re
@@ -87,19 +87,26 @@
                 tell you that cycling is hands down the best option! And now it's easier than ever to find the nearest trail
                 using our app!
               </p> 
+              <div class="new-zip">
               <form class="form-inline">
                   <h3 id="zip-c"></h3><span id="error"></span>
                   <input id="zip-code" class="form-control mr-sm-2" type="search" placeholder="Enter zip code"
                     aria-label="Search">
                   <button id="zip-btn" class="btn" type="submit">Search</button>
                 </form>
+              </div>
           </div>
           <div class="col-4"></div>
           </div>
       </div>
-      <div id="weatherwid" class="weawid d-flex"></div>
-
-      <div id="openweathermap-widget-12" class="mainwid"></div>
+      <div id="widget" class="container">
+        <div id="weatherwid" class="weawid d-flex"></div>
+  
+        <div id="openweathermap-widget-12" class="mainwid"></div>
+        
+      </div>
+        
+      
 
     <div id="description" class="card" style="width: 100%;">
         <div class="card-body">
@@ -110,7 +117,7 @@
          </div>
       </div>
 
-
+   
       
 
     <!--weather div for API 1-->
@@ -188,32 +195,15 @@
 
     <div id="trail" class="container">
       <div class="card mt-5 mb-5">
-        <h5 class="card-header text-center">Hiking Trails within 20 Miles</h5>
+          
+        <h5 class="card-header text-center">Hiking Trails within 20 Miles(Click here to close)</h5>
         <div id="trailHeader">
         </div>
       </div>
     </div>
 
-
-    <!-- <div id="latlon">
-      <table class="tabledos">
-        <tbody>
-          <tr>
-            <th scope="row"></th>
-            <td class="long">Lon:</td>
-            <td class="lonplaceholder">--</td>
-            <td class="lat"> Lat:</td>
-            <td class="latplaceholder">--</td>
-          </tr>
-        </tbody>
-    </div> -->
-
-
-
-
-
     <!--Other area -->
-    <div class="container">
+    <div id="hike" class="container">
       <div class="row">
         <div class="col-lg-6 mb-4">
           <div class="other h3">Beginner Tips</div>
@@ -280,7 +270,7 @@
     <footer>
       <div class="card">
         <div class="card-body footer">
-          <div class="container">
+          <div id="footer"class="container">
             <a href="https://github.com/legendary85/korista_trail" target="_blank">
               <i class="fa fa-github" style="font-size:36px"></i>
 

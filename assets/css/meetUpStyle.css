@@ -1,0 +1,38 @@
+body{
+  height: 100%;
+  font-family: 'Fira Sans', sans-serif;
+}
+#top-nav {
+  background: #313131;
+  /* position: fixed;  */
+  width: 100%;
+  z-index:10 ; 
+}
+
+a {
+  color: #fff !important;
+}
+
+a:hover {
+  color: green !important;
+
+}
+
+#logo {
+  color: #fff;
+}
+.jumbotron {
+  position: relative;
+  background:linear-gradient(rgba(0, 0, 0, 0.185), rgba(0, 0, 0, 0.144)), url("../images/social.png") top center;
+  background-size: cover;
+  padding-top: 10em;
+  padding-bottom:22em; 
+  border-radius: 0 !important;
+  color: #fff;
+  
+}
+#footer{
+  text-align: center;
+  background: #313131;
+  color: #fff;
+}
