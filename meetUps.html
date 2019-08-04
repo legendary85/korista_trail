@@ -64,7 +64,7 @@
 
         <div class="card">
             <div class="card-header">
-                <h5>Record</h5>
+                <h3>Record</h3>
             </div>
             <div class="card-body">
                 <table class="table">
@@ -84,11 +84,19 @@
 
                     </tbody>
                 </table>
+
+                <!-- btn to add record -->
+
+                <div class="d-flex recordbtn p-2">
+
+                    <button type="submit" class="btn btn-lg btn-primary">Add New Record</button>
+
+                </div>
             </div>
         </div>
 
-        <div class="card mt-4">
-            <h5 class="card-header">Latest Activity</h5>
+        <div class="card mt-4 activityTab">
+            <h3 class="card-header text-center">Latest Activity</h3>
             <div class="card-body">
                 <form>
 
@@ -119,7 +127,7 @@
 
                     </div>
 
-                    <div class="d-flex p-2 justify-content-center">
+                    <div class="d-flex p-2 ">
 
                         <button type="submit" class="btn subBtn btn-lg btn-primary">Submit</button>
 
@@ -142,7 +150,7 @@
             <!-- <div class="col-1"></div> -->
 
             <div class="col-md-6">
-                <button type="submit" class="btn newFr btn-lg btn-outline-warning btn-block">New Friend</button>
+                <button type="submit" class="btn newFr btn-lg btn-outline-primary btn-block">New Friend</button>
             </div>
             <div class="col-md-6">
                 <button type="submit" class="btn btn-lg listFr btn-outline-success btn-block">Friends List</button>
@@ -160,32 +168,34 @@
 
     <div class="container">
 
-            <div class="card friendo mt-5">
-                    <div class="card-header">
-                        <h5>Friends list</h5>
-                    </div>
-                    <div class="card-body cardtwo">
-                        <table class="table">
-                            <thead>
-                                <tr class="text-center">
-        
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Phone Number</th>
-                                    <th scope="col">Trail Met</th>
-                                    <th scope="col">Latest Trail</th>
-                                    <th scope="col">Latest Time</th>
-        
-                                </tr>
-                            </thead>
-                            <tbody class="tableTwo">
-        
-        
-        
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-        
+        <div class="card friendo mt-5">
+            <div class="card-header">
+                <h5>Friends list</h5>
+            </div>
+            <div class="card-body cardtwo">
+                <table class="table">
+                    <thead>
+                        <tr class="text-center">
+
+                            <th scope="col">Name</th>
+                            <th scope="col">Phone Number</th>
+                            <th scope="col">Trail Met</th>
+                            <th scope="col">Latest Trail</th>
+                            <th scope="col">Latest Time</th>
+
+                        </tr>
+                    </thead>
+                    <tbody class="tableTwo">
+
+
+
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+
 
         <div class="card addFriend mt-4">
             <h5 class="card-header">Add A Friend!</h5>
@@ -224,7 +234,7 @@
             </div>
         </div>
 
-        
+
 
     </div>
 
@@ -242,6 +252,21 @@
     <script>
 
         $(document).ready(function () {
+            $('.friendo').hide()
+            $('.addFriend').hide()
+            $('.activityTab').hide()
+
+
+           
+        })
+
+        
+
+        //  btn record adder display
+
+        $('.recordbtn').on('click', function () {
+
+            $('.activityTab').toggle()
             $('.friendo').hide()
             $('.addFriend').hide()
 
@@ -364,60 +389,70 @@
                 $('<td>').text(timeTaken),
                 $('<td>').text(speedDecimal + ' mph'),
 
-                $('<td>').html('<button class="bg-primary text-white">Select</button>')
+                $('<td>').html('<button class="bg-success sharebtn text-white">Share</button>')
 
 
             )
+
+
 
             ///append data/////////////////
 
 
             $('.tableOne').append(row)
 
+            $('.sharebtn').on('click', function(a) {
+                a.preventDefault()
+
+            // console.log('Beta Mode: Korista does not have access to your friends list yet. Try again later!')
+            // alert('Beta Mode: Korista does not have access to your friends list yet. Try again later!')
+
+            })
 
 
-            //buttons for new tab
+
+
 
 
         })
 
+       
 
-        $('.newFr').on('click', function(e){
+
+        //buttons to add a friend 
+
+        $('.newFr').on('click', function (e) {
             e.preventDefault()
             $('.addFriend').toggle()
             $('.friendo').hide()
+            $('.activityTab').hide()
 
 
-            $(".frdAdder").on('click', function(){
-
-            
-
-            
-       
-
-            //gather tain form input data/////////////////
-            Fname = $('#friendName').val().trim()     //name
-            Fphone = $('#phoneNumber').val().trim() //phone number
-            Ftrail = $('#trailName').val().trim()  //trail name
-           
+            $(".frdAdder").on('click', function (f) {
+                // f.preventDefault()
 
 
-            console.log(Fname) //name
-            console.log(Fphone) //number
-            console.log(Ftrail) // trail
+
+                //gather form input data/////////////////
+                Fname = $('#friendName').val().trim()     //name
+                Fphone = $('#phoneNumber').val().trim() //phone number
+                Ftrail = $('#trailName').val().trim()  //trail name
+
+                console.log(Fname) //name
+                console.log(Fphone) //number
+                console.log(Ftrail) // trail
 
 
-        })
-            
-
+            })
 
 
         })
 
-        $('.listFr').on('click', function(b){
+        $('.listFr').on('click', function (b) {
             b.preventDefault()
-             $('.friendo').toggle()
-             $('.addFriend').hide()
+            $('.friendo').toggle()
+            $('.addFriend').hide()
+            $('.activityTab').hide()
 
         })
 
