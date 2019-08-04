@@ -6,9 +6,11 @@
 .main-text
 {
     position: absolute;
+    display: inline-block;
     top: 150px;
     width: 96.66666666666666%;
     color: #FFF;
+    
 }
 
 /* navbar styling */
@@ -227,7 +229,18 @@
  }
  #description{
    display: block;
+   z-index: 30;
+   background: #fff !important;
+   color: black !important;
  }
+
+ /* #description .card-body {
+   background: #fff !important;
+   border: none !important;
+ }
+ #description .card-text {
+  color: black;
+ } */
  #widget{
   /* position: static;
   margin-top: 90px;
@@ -250,15 +263,17 @@
 
  @media only screen and (max-width: 375px){
 #logo{
-  font-size: 2rem;
+  display: inline;
 }
   .main-text
   {
       position: static;
-      top: 20px;
+      top: 10px;
     
   }
-
+  #description{
+    display: none;
+  }
   #widget{
     position: static;
     /* margin-top: 90px;
