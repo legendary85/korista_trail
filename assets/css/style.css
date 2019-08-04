@@ -1,7 +1,7 @@
 
   body{
     height: 100%;
-
+    font-family: 'Fira Sans', sans-serif;
 }
 .main-text
 {
@@ -11,6 +11,9 @@
     width: 96.66666666666666%;
     color: #FFF;
     
+}
+#famous-trails{
+  color:#fff;
 }
 
 /* navbar styling */
@@ -132,6 +135,15 @@
     margin-left:50px;
     background-color: #fd6031;
     color: black;
+    border: none;
+  }
+  #close-btn{
+    text-align: center;
+    background-color: #F8F8F8;
+    color:#fd6031;
+    border: none;
+  }
+  #hike{
     border: none;
   }
 
