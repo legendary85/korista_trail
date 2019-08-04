@@ -283,7 +283,7 @@
     
   }
   #description{
-    display: none;
+    display: block;
   }
   #widget{
     position: static;
