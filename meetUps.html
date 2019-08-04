@@ -126,6 +126,26 @@
 
     </div>
 
+
+    <div class="container mt-5 mb-5">
+
+        <div class="row">
+
+            <!-- <div class="col-1"></div> -->
+
+        <div class="col-6">
+            <button type="submit" class="btn btn-lg btn-outline-warning btn-block">New Friend</button>
+        </div>
+        <div class="col-6">
+            <button type="submit" class="btn btn-lg btn-outline-success btn-block">Friends List</button>
+        </div>
+        <!-- <div class="col-1"></div> -->
+
+    </div>
+        
+    </div>
+    
+
     </div>
 
 
@@ -168,7 +188,7 @@
             console.log(Tfreq) // time start
             console.log(TfreqDos) //time end
 
-            
+
 
             var start = moment.duration(Tfreq);
             var end = moment.duration(TfreqDos);
@@ -190,14 +210,14 @@
             console.log(Ttime)
 
             var avgSpeedMin = (Ttime / allMins)
-            var avgSpeedHr = avgSpeedMin*60;
+            var avgSpeedHr = avgSpeedMin * 60;
             var speedDecimal = avgSpeedHr.toFixed(2)
             console.log(avgSpeedMin)
             console.log(avgSpeedHr)
             console.log(speedDecimal)
 
 
-            
+
             var CurrentTime = moment().format("HH:mm")
             console.log(CurrentTime)
 
@@ -236,11 +256,11 @@
             var speedDecimal = snapshot.val().speedDecimal
 
 
-    
+
 
 
             var row = $('<tr>')
-                row.addClass('text-center')
+            row.addClass('text-center')
 
             row.append(
 
@@ -248,9 +268,9 @@
                 $('<td>').text(Ttime + ' miles'),
                 $('<td>').text(Tfreq),
                 $('<td>').text(TfreqDos),
-                $('<td>').text(timeTaken ),
+                $('<td>').text(timeTaken),
                 $('<td>').text(speedDecimal + ' mph')
-            
+
 
             )
 
@@ -260,84 +280,10 @@
             $('tbody').append(row)
 
 
-            //on-click to register train/////////////
-            //   $('.btn').on('click', function(event){
-            //       event.preventDefault()
 
-            //    //gather tain form input data/////////////////
-            //       Tname = $('#trainNameInput').val().trim()     //zipcode
-            //       Tdesti = $('#destinationInput').val().trim() //name
-            //       Ttime = $('#timeInput').val().trim()  //time started
-            //       Tfreq= $('#freqInput').val().trim()  //number of
+            //buttons for new tab
 
 
-            //       console.log(Tname)
-            //       console.log(Tdesti)
-            //       console.log(Ttime)
-            //       console.log(Tfreq)
-
-
-            //     ///push data to firebase/////////////////////
-
-            //      firebase.ref().push({
-            //           Tname: Tname,
-            //           Tdesti: Tdesti,
-            //           Ttime: Ttime,
-            //           Tfreq: Tfreq
-            //       })
-
-            //       //empty input after click////////////////
-
-            //       $('.form-control').val('');
-
-            //   })
-
-
-            // //lister for each child added/////////////////////////
-            // firebase.ref().on('child_added', function(snapshot){
-            //     var Tname = snapshot.val().Tname
-            //     var Tdesti = snapshot.val().Tdesti
-            //     var Ttime = snapshot.val().Ttime
-            //     var Tfreq = snapshot.val().Tfreq
-
-
-            //     // var convertedTime = moment(Ttime,'HH:mm');
-
-            //     //   console.log( convertedTime);
-
-            //     //   var currentTime = moment();
-
-            //     //   console.log(currentTime)
-
-            //     //   var timeDiff = currentTime.diff(moment(convertedTime),"minutes");
-            //     //   console.log(timeDiff)
-            //     //   var timeRemainder = timeDiff % Tfreq;
-            //     //   var mnsBeforeNext = Tfreq - timeRemainder;
-            //     //   var tNext = moment().add(mnsBeforeNext, 'minutes');
-
-
-
-            //     //   var nextArrival = tNext.format("HH:mm")
-
-            //     var CurrentTime = moment().format("HH:mm")
-            //     console.log(CurrentTime)
-
-            //     var row = $('<tr>')
-
-            //     row.append(
-
-            //         $('<td>').text(Tdesti),        
-            //         $('<td>').text(Ttime),
-            //         $('<td>').text(Tfreq),
-            //         $('<td>').text(Tname),
-            //         // $('<td>').text(mnsBeforeNext),
-
-            //     )
-
-            //     ///append data/////////////////
-
-
-            //     $('tbody').append(row)
         })
 
 
