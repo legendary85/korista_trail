@@ -214,7 +214,7 @@
 
                     <div class="d-flex p-2 justify-content-center">
 
-                        <button type="submit" class="btn btn-lg btn-warning">Add A Friend</button>
+                        <button type="submit" class="btn frdAdder btn-lg btn-warning">Add A Friend</button>
 
                     </div>
 
@@ -382,13 +382,40 @@
         })
 
 
-        $('.newFr').on('click', function(){
+        $('.newFr').on('click', function(e){
+            e.preventDefault()
             $('.addFriend').toggle()
             $('.friendo').hide()
 
+
+            $(".frdAdder").on('click', function(){
+
+            
+
+            
+       
+
+            //gather tain form input data/////////////////
+            Fname = $('#friendName').val().trim()     //name
+            Fphone = $('#phoneNumber').val().trim() //phone number
+            Ftrail = $('#trailName').val().trim()  //trail name
+           
+
+
+            console.log(Fname) //name
+            console.log(Fphone) //number
+            console.log(Ftrail) // trail
+
+
+        })
+            
+
+
+
         })
 
-        $('.listFr').on('click', function(){
+        $('.listFr').on('click', function(b){
+            b.preventDefault()
              $('.friendo').toggle()
              $('.addFriend').hide()
 
