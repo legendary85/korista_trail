@@ -77,6 +77,7 @@
                             <th scope="col">Ended</th>
                             <th scope="col">Time Taken</th>
                             <th scope="col">Avg. Speed</th>
+                            <th scope="col">Challenge A Friend</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -269,6 +270,9 @@
             var row = $('<tr>')
             row.addClass('text-center')
 
+           
+
+
             row.append(
 
                 $('<td>').text(Tdesti),
@@ -276,7 +280,9 @@
                 $('<td>').text(Tfreq),
                 $('<td>').text(TfreqDos),
                 $('<td>').text(timeTaken),
-                $('<td>').text(speedDecimal + ' mph')
+                $('<td>').text(speedDecimal + ' mph'),
+                   
+                $('<td>').html('<button class="bg-primary text-white">Select</button>')
 
 
             )
