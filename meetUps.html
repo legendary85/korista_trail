@@ -80,7 +80,7 @@
                             <th scope="col">Challenge A Friend</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="tableOne">
 
                     </tbody>
                 </table>
@@ -121,11 +121,11 @@
 
                     <div class="d-flex p-2 justify-content-center">
 
-                            <button type="submit" class="btn btn-lg btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-lg btn-primary">Submit</button>
 
                     </div>
 
-                    
+
                 </form>
 
             </div>
@@ -141,20 +141,94 @@
 
             <!-- <div class="col-1"></div> -->
 
-        <div class="col-md-6">
-            <button type="submit" class="btn btn-lg btn-outline-warning btn-block">New Friend</button>
+            <div class="col-md-6">
+                <button type="submit" class="btn btn-lg btn-outline-warning btn-block">New Friend</button>
+            </div>
+            <div class="col-md-6">
+                <button type="submit" class="btn btn-lg btn-outline-success btn-block">Friends List</button>
+            </div>
+            <!-- <div class="col-1"></div> -->
+
         </div>
-        <div class="col-md-6">
-            <button type="submit" class="btn btn-lg btn-outline-success btn-block">Friends List</button>
-        </div>
-        <!-- <div class="col-1"></div> -->
 
     </div>
-        
+
+
     </div>
+
+    <!-- form for inputing friend -->
+
+    <div class="container">
+
+    <div class="card mt-4">
+            <h5 class="card-header">Add A Friend!</h5>
+            <div class="card-body cardone">
+                <form>
+
+                    <div class="form-group">
+                        <label for="friendName">Name</label>
+                        <input type="text" class="form-control" id="friendName" placeholder="Enter name here">
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number:</label>
+                        <input type="tel" class="form-control" id="phoneNumber" placeholder="Enter phone number here!">
+                    </div>
+                    <div class="form-group">
+                        <label for="trailName">Trail:</label>
+                        <input type="text" class="form-control" id="trailName"
+                            placeholder="Enter trail name here!">
+                    </div>
+                    <!-- <div class="form-group">
+                        <label for="speedAvg">Latest Record:</label>
+                        <input type="text" class="form-control" id="speedAvg"
+                            placeholder="Enter Latest Record">
+                    </div> -->
+
+                    
+
+                    <div class="d-flex p-2 justify-content-center">
+
+                        <button type="submit" class="btn btn-lg btn-warning">Add A Friend</button>
+
+                    </div>
+
+
+                </form>
+
+            </div>
+        </div>
+
+        <div class="card mt-5">
+                <div class="card-header">
+                    <h5>Friends list</h5>
+                </div>
+                <div class="card-body cardtwo">
+                    <table class="table">
+                        <thead>
+                            <tr class="text-center">
     
+                                <th scope="col">Name</th>
+                                <th scope="col">Phone Number</th>
+                                <th scope="col">Trail Met</th>
+                                <th scope="col">Latest Trail</th>
+                                <th scope="col">Latest Time</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody class="tableTwo">
+
+                            
+    
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
 
     </div>
+
+</div>
+
 
 
     <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
@@ -270,7 +344,7 @@
             var row = $('<tr>')
             row.addClass('text-center')
 
-           
+
 
 
             row.append(
@@ -281,7 +355,7 @@
                 $('<td>').text(TfreqDos),
                 $('<td>').text(timeTaken),
                 $('<td>').text(speedDecimal + ' mph'),
-                   
+
                 $('<td>').html('<button class="bg-primary text-white">Select</button>')
 
 
@@ -290,7 +364,7 @@
             ///append data/////////////////
 
 
-            $('tbody').append(row)
+            $('.tableOne').append(row)
 
 
 
