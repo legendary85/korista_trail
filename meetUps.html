@@ -62,7 +62,7 @@
 
     <div class="container">
 
-        <div class="card">
+        <div class="card trailrecord">
             <div class="card-header">
                 <h3>Record</h3>
             </div>
@@ -76,7 +76,7 @@
                             <th scope="col">Started</th>
                             <th scope="col">Ended</th>
                             <th scope="col">Time Taken</th>
-                            <th scope="col">Avg. Speed</th>
+                            <th scope="col">Avg. Speed (mph)</th>
                             <th scope="col">Challenge A Friend</th>
                         </tr>
                     </thead>
@@ -84,16 +84,19 @@
 
                     </tbody>
                 </table>
+                
 
-                <!-- btn to add record -->
-
-                <div class="d-flex recordbtn p-2">
-
-                    <button type="submit" class="btn btn-lg btn-primary">Add New Record</button>
-
-                </div>
+                
             </div>
         </div>
+
+        <!-- btn to add record -->
+
+        <div class="d-flex recordbtn p-2">
+
+                <button type="submit" class="btn btn-lg btn-outline-primary btn-block">Add New Record</button>
+
+            </div>
 
         <div class="card mt-4 activityTab">
             <h3 class="card-header text-center">Latest Activity</h3>
@@ -150,7 +153,7 @@
             <!-- <div class="col-1"></div> -->
 
             <div class="col-md-6">
-                <button type="submit" class="btn newFr btn-lg btn-outline-primary btn-block">New Friend</button>
+                <button type="submit" class="btn newFr btn-lg btn-outline-warning btn-block">New Friend</button>
             </div>
             <div class="col-md-6">
                 <button type="submit" class="btn btn-lg listFr btn-outline-success btn-block">Friends List</button>
@@ -248,7 +251,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
-
+    
     <script>
 
         $(document).ready(function () {
@@ -269,6 +272,7 @@
             $('.activityTab').toggle()
             $('.friendo').hide()
             $('.addFriend').hide()
+            $('.trailrecord').show()
 
         })
 
@@ -379,15 +383,22 @@
 
 
 
+            // var miles = Ttime
+            // if (miles === 'undefined'){
+            //     miles === ('')
+            // }else{
+            //     console.log('g')
+            // }
+
 
             row.append(
 
                 $('<td>').text(Tdesti),
-                $('<td>').text(Ttime + ' miles'),
+                $('<td>').text(Ttime ),
                 $('<td>').text(Tfreq),
                 $('<td>').text(TfreqDos),
                 $('<td>').text(timeTaken),
-                $('<td>').text(speedDecimal + ' mph'),
+                $('<td>').text(speedDecimal),
 
                 $('<td>').html('<button class="bg-success sharebtn text-white">Share</button>')
 
@@ -405,7 +416,7 @@
                 a.preventDefault()
 
             // console.log('Beta Mode: Korista does not have access to your friends list yet. Try again later!')
-            // alert('Beta Mode: Korista does not have access to your friends list yet. Try again later!')
+            alert('Beta Mode: Korista does not have access to your friends list yet. Try again later!')
 
             })
 
@@ -426,25 +437,10 @@
             $('.addFriend').toggle()
             $('.friendo').hide()
             $('.activityTab').hide()
+            $('.trailrecord').hide()
 
 
-            $(".frdAdder").on('click', function (f) {
-                // f.preventDefault()
-
-
-
-                //gather form input data/////////////////
-                Fname = $('#friendName').val().trim()     //name
-                Fphone = $('#phoneNumber').val().trim() //phone number
-                Ftrail = $('#trailName').val().trim()  //trail name
-
-                console.log(Fname) //name
-                console.log(Fphone) //number
-                console.log(Ftrail) // trail
-
-
-            })
-
+            
 
         })
 
@@ -453,6 +449,7 @@
             $('.friendo').toggle()
             $('.addFriend').hide()
             $('.activityTab').hide()
+            $('.trailrecord').hide()
 
         })
 
@@ -462,6 +459,8 @@
 
 
     </script>
+
+<script src="assets/javascript/friendadder.js"></script>
 
 
 </body>
