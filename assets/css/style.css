@@ -192,6 +192,20 @@
   z-index: 1000;
 }
 
+@media only screen and (max-width: 1440px) {
+#widget{
+  display: none;  
+
+}
+}
+@media only screen and (max-width: 1024px) {
+  .main-text
+  {
+      position: absolute;
+      top: 80px;
+    
+  }
+  }
 
 
 @media only screen and (max-width: 600px) {
@@ -214,26 +228,54 @@
  #description{
    display: block;
  }
+ #widget{
+  /* position: static;
+  margin-top: 90px;
+  margin-bottom: 50px;
+  margin-left: 50px;
+  
+  z-index:100; */
+  display: none;
 
 }
 
-/* @media only screen and (max-width: 375px){
-
-  .mainwid{
-    position: static;
-    margin-top: 10px;
-    margin-left: 10px;
-    z-index: 0;
+.stickThat{
+  position: static;
+  top: 60px;
   
+  z-index: 10;
+}
+
+}
+
+ @media only screen and (max-width: 375px){
+#logo{
+  font-size: 2rem;
+}
+  .main-text
+  {
+      position: static;
+      top: 20px;
+    
+  }
+
+  #widget{
+    position: static;
+    /* margin-top: 90px;
+    margin-bottom: 50px;
+    margin-left: 100px; */
+    margin: 0 auto;
+    float: none;
+    z-index: inherit 0;;
   
   }
   
   .stickThat{
-    position: relative;
+    position: static;
     top: 60px;
     
-    z-index: 0;
+    z-index: 10;
   }
 
-} */
+} 
 
