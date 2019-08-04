@@ -1,3 +1,7 @@
+body{
+  height: 100%;
+
+}
 #top-nav {
   background: #313131;
   /* position: fixed;  */
@@ -15,5 +19,10 @@ a:hover {
 }
 
 #logo {
+  color: #fff;
+}
+#footer{
+  text-align: center;
+  background: #313131;
   color: #fff;
 }
