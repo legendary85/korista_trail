@@ -10,7 +10,7 @@ $( window ).scroll(function() {
     // console.log(offset)
     // console.log(window.scrollY)
     
-    if(window.scrollY> offset -100){
+    if(window.scrollY> offset -150){
         $('#openweathermap-widget-12').addClass('stickThat')
 
     }else{
