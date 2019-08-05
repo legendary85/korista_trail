@@ -62,6 +62,7 @@ $(document).ready(function () {
                     //create a variable that creates a img in html, add class, add src
                     var hikeImage = $("<img>");
                     hikeImage.addClass("rounded float-left mr-2");
+                    hikeImage.addClass("trail-pics");
                     hikeImage.attr("src", trailResults[i].imgSmallMed);
                    
                     //append new img to new div cardBody

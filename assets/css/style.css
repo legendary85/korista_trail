@@ -12,9 +12,11 @@
     color: #FFF;
     
 }
+
 #famous-trails{
   color:#fff;
 }
+
 
 /* navbar styling */
   #top-nav {
@@ -47,6 +49,10 @@
     border-radius: 0 !important;
     
 }
+#trail, #weather {
+  overflow: scroll;
+}
+
 
 
   .card-body {
@@ -225,7 +231,12 @@
   .main-text{
    top: 75px;
 }
- 
+
+.trail-pics{
+  height: 100px;
+  width: 175px;
+}
+
   .main-para{
     display: none;  
   }
@@ -295,6 +306,7 @@
     z-index: inherit 0;;
   
   }
+
   
   .stickThat{
     position: static;
