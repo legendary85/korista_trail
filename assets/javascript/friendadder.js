@@ -16,7 +16,7 @@ $(".frdAdder").on('click', function (f) {
     f.preventDefault()
 
     $('.trailrecord').hide()
-    // $('.friendo').show()
+    $('.friendo').show()
 
     //gather form input data/////////////////
     Fname = $('#friendName').val().trim()     //name
@@ -66,7 +66,7 @@ rowdos.append(
     $('<td>').text(Fname),
     $('<td>').text(Fphone),
     $('<td>').text(Ftrail),
-    // $('<td>').text('--'),
+    $('<td>').text(''),
     // $('<td>').text('--'),
 
 
