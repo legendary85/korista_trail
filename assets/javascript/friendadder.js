@@ -66,8 +66,8 @@ rowdos.append(
     $('<td>').text(Fname),
     $('<td>').text(Fphone),
     $('<td>').text(Ftrail),
-    $('<td>').text('--'),
-    $('<td>').text('--'),
+    // $('<td>').text('--'),
+    // $('<td>').text('--'),
 
 
     // $('<td>').html('<button class="bg-success sharebtn text-white">Share</button>')
