@@ -60,22 +60,22 @@
 
     <div class="container">
 
-        <div class="card trailrecord">
+        <div class="card trailrecord text-white bg-secondary">
             <div class="card-header">
-                <h3>Record</h3>
+                <h2>Record</h2>
             </div>
             <div class="card-body">
                 <table class="table">
                     <thead>
-                        <tr class="text-center">
+                        <tr class="text-center text-white bg-secondary">
 
-                            <th scope="col">Trail Name</th>
-                            <th scope="col">Miles</th>
-                            <th scope="col">Started</th>
-                            <th scope="col">Ended</th>
-                            <th scope="col">Time Taken</th>
-                            <th scope="col">Avg. Speed (mph)</th>
-                            <th scope="col">Challenge A Friend</th>
+                            <th scope="col"><h5>Trail Name</h5></th>
+                            <th scope="col"><h5>Miles</h5></th>
+                            <th scope="col"><h5>Started</h5></th>
+                            <th scope="col"><h5>Ended</h5></th>
+                            <th scope="col"><h5>Time Taken</h5></th>
+                            <th scope="col"><h5>Avg. Speed (mph)</h5></th>
+                            <th scope="col"><h5>Challenge A Friend</h5></th>
                         </tr>
                     </thead>
                     <tbody class="tableOne">
@@ -96,7 +96,7 @@
 
         </div>
 
-        <div class="card mt-4 activityTab">
+        <div class="card mt-4 activityTab ">
             <h3 class="card-header text-center">Latest Activity</h3>
             <div class="card-body">
                 <form>
@@ -178,19 +178,19 @@
 
     <div class="container">
 
-        <div class="card friendo mt-5">
+        <div class="card friendo mt-5 mb-5 text-white bg-secondary">
             <div class="card-header">
-                <h5>Friends list</h5>
+                <h2>Friends list</h2>
             </div>
             <div class="card-body cardtwo">
                 <table class="table">
                     <thead>
-                        <tr class="text-center">
+                        <tr class="text-center text-white">
 
-                            <th scope="col">Name</th>
-                            <th scope="col">Phone Number</th>
-                            <th scope="col">Trail Name</th>
-                            <th scope="col">Latest Challenge</th>
+                            <th scope="col"><h5>Name</h5></th>
+                            <th scope="col"><h5>Phone Number</h5></th>
+                            <th scope="col"><h5>Trail Name</h5></th>
+                            <th scope="col"><h5>Latest Challenge</h5></th>
                             <!-- <th scope="col">Latest Time</th> --> 
 
                         </tr>
@@ -389,12 +389,12 @@
 
             row.append(
 
-                $('<td>').text(Tdesti),
-                $('<td>').text(Ttime),
-                $('<td>').text(Tfreq),
-                $('<td>').text(TfreqDos),
-                $('<td>').text(timeTaken),
-                $('<td>').text(speedDecimal),
+                $('<td>').text(Tdesti).addClass('text-white bg-secondary'),
+                $('<td>').text(Ttime).addClass('text-white bg-secondary'),
+                $('<td>').text(Tfreq).addClass('text-white bg-secondary'),
+                $('<td>').text(TfreqDos).addClass('text-white bg-secondary'),
+                $('<td>').text(timeTaken).addClass('text-white bg-secondary'),
+                $('<td>').text(speedDecimal).addClass('text-white bg-secondary'),
 
                 $('<td>').html('<button class="bg-success sharebtn text-white">Share</button>')
 
