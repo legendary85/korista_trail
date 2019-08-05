@@ -67,7 +67,7 @@ $(document).ready(function () {
                    
                     //append new img to new div cardBody
                     cardBody.append(hikeImage);
-
+                  
                     //create a variable that creates a H4 in HTML that stores the location from trail API as the header
                     var pLocationHeader =$("<h4>").text("Location: " + trailResults[i].location);
                     //append the H4 to cardBody div
