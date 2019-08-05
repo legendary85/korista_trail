@@ -49,9 +49,13 @@
     border-radius: 0 !important;
     
 }
-#trail, #weather {
+#trail  {
   overflow: scroll;
 }
+
+/* #weather{
+  overflow: scroll;
+} */
 
 
 
@@ -159,7 +163,7 @@
   }
 
   .weather{
-      top: 7px
+      top: 55px
   }
 
   .my-4{
