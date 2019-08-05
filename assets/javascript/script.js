@@ -11,11 +11,7 @@ $(document).ready(function () {
     // });
 
 
-    //hide weather table after rendered
-    $('#hide').on('click', function (check) {
-        check.preventDefault();
-        $('.weather').hide();
-    })
+
 
 
     //hide weather table after rendered

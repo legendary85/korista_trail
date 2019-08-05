@@ -1,15 +1,22 @@
 
   body{
     height: 100%;
-
+    font-family: 'Fira Sans', sans-serif;
 }
 .main-text
 {
     position: absolute;
+    display: inline-block;
     top: 150px;
     width: 96.66666666666666%;
     color: #FFF;
+    
 }
+
+#famous-trails{
+  color:#fff;
+}
+
 
 /* navbar styling */
   #top-nav {
@@ -42,6 +49,10 @@
     border-radius: 0 !important;
     
 }
+#trail, #weather {
+  overflow: scroll;
+}
+
 
 
   .card-body {
@@ -132,6 +143,15 @@
     color: black;
     border: none;
   }
+  #close-btn{
+    text-align: center;
+    background-color: #F8F8F8;
+    color:#fd6031;
+    border: none;
+  }
+  #hike{
+    border: none;
+  }
 
   .main-para{
       text-align: left;
@@ -168,13 +188,22 @@
   bottom: 1rem;
 } */
 
-.mainwid{
+#widget{
   position: absolute;
   margin-top: 10px;
   margin-left: 10px;
+  z-index: 30;
 
 
 }
+/* .mainwid{
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 10px;
+  z-index: 30;
+
+
+} */
 
 .stickThat{
   position: fixed;
@@ -182,13 +211,32 @@
   z-index: 10000;
 }
 
+@media only screen and (max-width: 1440px) {
+#widget{
+  display: none;  
+
+}
+}
+@media only screen and (max-width: 1024px) {
+  .main-text
+  {
+      position: absolute;
+      top: 80px;
+    
+  }
+  }
 
 
 @media only screen and (max-width: 600px) {
   .main-text{
    top: 75px;
 }
- 
+
+.trail-pics{
+  height: 100px;
+  width: 175px;
+}
+
   .main-para{
     display: none;  
   }
@@ -203,7 +251,69 @@
  }
  #description{
    display: block;
+   z-index: 30;
+   background: #fff !important;
+   color: black !important;
  }
 
+ /* #description .card-body {
+   background: #fff !important;
+   border: none !important;
+ }
+ #description .card-text {
+  color: black;
+ } */
+ #widget{
+  /* position: static;
+  margin-top: 90px;
+  margin-bottom: 50px;
+  margin-left: 50px;
+  
+  z-index:100; */
+  display: none;
+
 }
+
+.stickThat{
+  position: static;
+  top: 60px;
+  
+  z-index: 10;
+}
+
+}
+
+ @media only screen and (max-width: 375px){
+#logo{
+  display: inline;
+}
+  .main-text
+  {
+      position: static;
+      top: 10px;
+    
+  }
+  #description{
+    display: block;
+  }
+  #widget{
+    position: static;
+    /* margin-top: 90px;
+    margin-bottom: 50px;
+    margin-left: 100px; */
+    margin: 0 auto;
+    float: none;
+    z-index: inherit 0;;
+  
+  }
+
+  
+  .stickThat{
+    position: static;
+    top: 60px;
+    
+    z-index: 10;
+  }
+
+} 
 

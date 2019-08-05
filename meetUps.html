@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/reset.css">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
     <!-- <link rel="stylesheet" type="text/css" href="assets/css/style.css"> -->
-
-    <link href="assets/images/favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/css/meetUpStyle.css">
+    <link href="assets/images/favicon.ico" rel="icon" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>Korista Trails - MeetUps</title>
 
@@ -29,7 +31,7 @@
 
     <!-- Navbar -->
     <nav id="top-nav" class="navbar navbar-expand-lg navbar-light sticky-top">
-        <a class="navbar-brand" href="#">Kt</a>
+        <a class="navbar-brand" href="index.html">Kt</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -51,10 +53,6 @@
             </ul>
         </div>
     </nav>
-
-
-
-
 
     <div class="jumbotron">
         <h1 class='text-center'>Cycling Meet Ups</h1>
@@ -84,9 +82,9 @@
 
                     </tbody>
                 </table>
-                
 
-                
+
+
             </div>
         </div>
 
@@ -94,9 +92,9 @@
 
         <div class="d-flex recordbtn p-2">
 
-                <button type="submit" class="btn btn-lg btn-outline-primary btn-block">Add New Record</button>
+            <button type="submit" class="btn btn-lg btn-outline-primary btn-block">Add New Record</button>
 
-            </div>
+        </div>
 
         <div class="card mt-4 activityTab">
             <h3 class="card-header text-center">Latest Activity</h3>
@@ -122,30 +120,39 @@
                         <input type="text" class="form-control" id="freqInputDos"
                             placeholder="(HH:mm) Enter time using military slyte ">
                     </div>
-
                     <div class="form-group">
                         <label for="trainNameInput">Zip Code</label>
                         <input type="text" class="form-control" id="trainNameInput" aria-describedby="textHelp"
                             placeholder="Enter your current zip code">
-
-                    </div>
-
-                    <div class="d-flex p-2 ">
-
-                        <button type="submit" class="btn subBtn btn-lg btn-primary">Submit</button>
-
-                    </div>
-
-
-                </form>
-
+                        </div>
+                        <div class="d-flex p-2 ">
+                            <button type="submit" class="btn subBtn btn-lg btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
 
 
-    </div>
 
 
+
+
+
+
+
+      
+
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+
+    <script>
+
+    </script>
     <div class="container mt-5 mb-5">
 
         <div class="row">
@@ -237,8 +244,6 @@
             </div>
         </div>
 
-
-
     </div>
 
     </div>
@@ -251,7 +256,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
-    
+
     <script>
 
         $(document).ready(function () {
@@ -260,10 +265,7 @@
             $('.activityTab').hide()
 
 
-           
         })
-
-        
 
         //  btn record adder display
 
@@ -335,14 +337,8 @@
             console.log(avgSpeedHr)
             console.log(speedDecimal)
 
-
-
             var CurrentTime = moment().format("HH:mm")
             console.log(CurrentTime)
-
-
-
-
 
             ///push data to firebase/////////////////////
 
@@ -394,7 +390,7 @@
             row.append(
 
                 $('<td>').text(Tdesti),
-                $('<td>').text(Ttime ),
+                $('<td>').text(Ttime),
                 $('<td>').text(Tfreq),
                 $('<td>').text(TfreqDos),
                 $('<td>').text(timeTaken),
@@ -402,35 +398,24 @@
 
                 $('<td>').html('<button class="bg-success sharebtn text-white">Share</button>')
 
-
             )
-
-
 
             ///append data/////////////////
 
 
             $('.tableOne').append(row)
 
-            $('.sharebtn').on('click', function(a) {
+            $('.sharebtn').on('click', function (a) {
                 a.preventDefault()
 
-            // console.log('Beta Mode: Korista does not have access to your friends list yet. Try again later!')
-            alert('Beta Mode: Korista does not have access to your friends list yet. Try again later!')
+                // console.log('Beta Mode: Korista does not have access to your friends list yet. Try again later!')
+                alert('Beta Mode: Korista does not have access to your friends list yet. Try again later!')
 
             })
 
-
-
-
-
-
         })
 
-       
-
-
-        //buttons to add a friend 
+          //buttons to add a friend 
 
         $('.newFr').on('click', function (e) {
             e.preventDefault()
@@ -439,8 +424,6 @@
             $('.activityTab').hide()
             $('.trailrecord').hide()
 
-
-            
 
         })
 
@@ -453,14 +436,25 @@
 
         })
 
-
-
-
-
-
     </script>
 
-<script src="assets/javascript/friendadder.js"></script>
+      <!-- <footer> -->
+        <footer>
+            <div class="card">
+                <div id="footer" class="card-body footer">
+                    <div class="container">
+                        <a href="https://github.com/legendary85/korista_trail" target="_blank">
+                            <i class="fa fa-github" style="font-size:36px"></i>
+    
+                        </a>
+                        <p class="coded-by">Coded by: Korista Tech Solutions</p>
+                    </div>
+    
+                </div>
+            </div>
+        </footer>
+
+    <script src="assets/javascript/friendadder.js"></script>
 
 
 </body>
