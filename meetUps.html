@@ -69,13 +69,27 @@
                     <thead>
                         <tr class="text-center text-white bg-secondary">
 
-                            <th scope="col"><h5>Trail Name</h5></th>
-                            <th scope="col"><h5>Miles</h5></th>
-                            <th scope="col"><h5>Started</h5></th>
-                            <th scope="col"><h5>Ended</h5></th>
-                            <th scope="col"><h5>Time Taken</h5></th>
-                            <th scope="col"><h5>Avg. Speed (mph)</h5></th>
-                            <th scope="col"><h5>Challenge A Friend</h5></th>
+                            <th scope="col">
+                                <h5>Trail Name</h5>
+                            </th>
+                            <th scope="col">
+                                <h5>Miles</h5>
+                            </th>
+                            <th scope="col">
+                                <h5>Started</h5>
+                            </th>
+                            <th scope="col">
+                                <h5>Ended</h5>
+                            </th>
+                            <th scope="col">
+                                <h5>Time Taken</h5>
+                            </th>
+                            <th scope="col">
+                                <h5>Avg. Speed (mph)</h5>
+                            </th>
+                            <th scope="col">
+                                <h5>Challenge A Friend</h5>
+                            </th>
                         </tr>
                     </thead>
                     <tbody class="tableOne">
@@ -112,26 +126,24 @@
                     </div>
                     <div class="form-group">
                         <label for="freqInput">Time started:</label>
-                        <input type="text" class="form-control" id="freqInput"
-                            placeholder="(HH:mm) ">
+                        <input type="text" class="form-control" id="freqInput" placeholder="(HH:mm) ">
                     </div>
                     <div class="form-group">
                         <label for="freqInputDos">Time ended:</label>
-                        <input type="text" class="form-control" id="freqInputDos"
-                            placeholder="(HH:mm) ">
+                        <input type="text" class="form-control" id="freqInputDos" placeholder="(HH:mm) ">
                     </div>
                     <div class="form-group">
                         <label for="trainNameInput">Zip Code</label>
                         <input type="text" class="form-control" id="trainNameInput" aria-describedby="textHelp"
                             placeholder="Enter your current zip code">
-                        </div>
-                        <div class="d-flex p-2 ">
-                            <button type="submit" class="btn subBtn btn-lg btn-primary">Submit</button>
-                        </div>
-                    </form>
-                </div>
+                    </div>
+                    <div class="d-flex p-2 ">
+                        <button type="submit" class="btn subBtn btn-lg btn-primary">Submit</button>
+                    </div>
+                </form>
             </div>
         </div>
+    </div>
 
 
 
@@ -141,7 +153,7 @@
 
 
 
-      
+
 
     <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
 
@@ -187,11 +199,19 @@
                     <thead>
                         <tr class="text-center text-white">
 
-                            <th scope="col"><h5>Name</h5></th>
-                            <th scope="col"><h5>Phone Number</h5></th>
-                            <th scope="col"><h5>Trail Name</h5></th>
-                            <th scope="col"><h5>Latest Challenge</h5></th>
-                            <!-- <th scope="col">Latest Time</th> --> 
+                            <th scope="col">
+                                <h5>Name</h5>
+                            </th>
+                            <th scope="col">
+                                <h5>Phone Number</h5>
+                            </th>
+                            <th scope="col">
+                                <h5>Trail Name</h5>
+                            </th>
+                            <th scope="col">
+                                <h5>Latest Challenge</h5>
+                            </th>
+                            <!-- <th scope="col">Latest Time</th> -->
 
                         </tr>
                     </thead>
@@ -409,13 +429,13 @@
                 a.preventDefault()
 
                 // console.log('Beta Mode: Korista does not have access to your friends list yet. Try again later!')
-                alert('Beta Mode: Korista does not have access to your friends list yet. Try again later!')
+                alert('I ran '+Ttime+ ' miles today at an avg. speed of ' + speedDecimal + ' mph' + '  ---- Beta Mode: not connect to friend list yet')
 
             })
 
         })
 
-          //buttons to add a friend 
+        //buttons to add a friend 
 
         $('.newFr').on('click', function (e) {
             e.preventDefault()
@@ -438,21 +458,21 @@
 
     </script>
 
-      <!-- <footer> -->
-        <footer>
-            <div class="card">
-                <div id="footer" class="card-body footer">
-                    <div class="container">
-                        <a href="https://github.com/legendary85/korista_trail" target="_blank">
-                            <i class="fa fa-github" style="font-size:36px"></i>
-    
-                        </a>
-                        <p class="coded-by">Coded by: Korista Tech Solutions</p>
-                    </div>
-    
+    <!-- <footer> -->
+    <footer>
+        <div class="card">
+            <div id="footer" class="card-body footer">
+                <div class="container">
+                    <a href="https://github.com/legendary85/korista_trail" target="_blank">
+                        <i class="fa fa-github" style="font-size:36px"></i>
+
+                    </a>
+                    <p class="coded-by">Coded by: Korista Tech Solutions</p>
                 </div>
+
             </div>
-        </footer>
+        </div>
+    </footer>
 
     <script src="assets/javascript/friendadder.js"></script>
 

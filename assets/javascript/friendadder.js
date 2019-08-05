@@ -1,4 +1,5 @@
 
+// how do I hold data from two different component. one for record, one for friend list
 
 // var firebaseConfig = {
 //     apiKey: "AIzaSyBR-DiM3lu__FagCmgWqDl9EqweH_40G84",
@@ -60,23 +61,23 @@ firebase.ref().on('child_added', function (snapshot) {
     var rowdos = $('<tr>')
     rowdos.addClass('text-center')
 
-    
-rowdos.append(
 
-    $('<td>').text(Fname).addClass('text-white bg-secondary'),
-    $('<td>').text(Fphone).addClass('text-white bg-secondary'),
-    $('<td>').text(Ftrail).addClass('text-white bg-secondary'),
-    $('<td>').text('').addClass('text-white bg-secondary'),
-    // $('<td>').text('--'),
+    rowdos.append(
 
-
-    // $('<td>').html('<button class="bg-success sharebtn text-white">Share</button>')
+        $('<td>').text(Fname).addClass('text-white bg-secondary'),
+        $('<td>').text(Fphone).addClass('text-white bg-secondary'),
+        $('<td>').text(Ftrail).addClass('text-white bg-secondary'),
+        $('<td>').text('').addClass('text-white bg-secondary'),
+        // $('<td>').text('--'),
 
 
-)
+        // $('<td>').html('<button class="bg-success sharebtn text-white">Share</button>')
 
-$('.tableTwo').append(rowdos)
-    
+
+    )
+
+    $('.tableTwo').append(rowdos)
+
 
 })
 
