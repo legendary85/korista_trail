@@ -1,18 +1,19 @@
 $(document).ready(function () {
-
+    
     $('.weather').hide()
-
-
+    
+    
     $('.tabledos').hide()    
-
+    
     // $(document).on("click", "#zip-btn", function (e) {
-    //     e.preventDefault();
-    //     $.scrollTo('.weather', 2000);
-    // });
-
-
-
-
+        //     e.preventDefault();
+        //     $.scrollTo('.weather', 2000);
+        // });
+        
+        
+        
+        //javascript to add laoder
+        document.getElementById('loading').style.display = 'block';
 
     //hide weather table after rendered
     $('#hide').on('click',function(check){
