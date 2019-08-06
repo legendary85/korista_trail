@@ -1,3 +1,7 @@
+/* 
+  html {
+    scroll-behavior: smooth;
+  } */
 
   body{
     height: 100%;
@@ -49,9 +53,13 @@
     border-radius: 0 !important;
     
 }
-#trail, #weather {
+#trail  {
   overflow: scroll;
 }
+
+/* #weather{
+  overflow: scroll;
+} */
 
 
 
@@ -159,7 +167,7 @@
   }
 
   .weather{
-      top: 56px
+      top: 55px
   }
 
   .my-4{
