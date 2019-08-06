@@ -64,10 +64,10 @@ firebase.ref().on('child_added', function (snapshot) {
 
     rowdos.append(
 
-        $('<td>').text(Fname).addClass('text-white bg-secondary'),
-        $('<td>').text(Fphone).addClass('text-white bg-secondary'),
-        $('<td>').text(Ftrail).addClass('text-white bg-secondary'),
-        $('<td>').text('').addClass('text-white bg-secondary'),
+        $('<td>').text(Fname),
+        $('<td>').text(Fphone),
+        $('<td>').text(Ftrail),
+        $('<td>').text(''),
         // $('<td>').text('--'),
 
 

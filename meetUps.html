@@ -19,7 +19,7 @@
 
     <style type="text/css">
 
-    
+
 
 
 
@@ -62,14 +62,14 @@
 
     <div class="container">
 
-        <div class="card trailrecord text-white bg-secondary">
+        <div class="card trailrecord">
             <div class="card-header">
                 <h2>Record</h2>
             </div>
             <div class="card-body">
                 <table class="table">
                     <thead>
-                        <tr class="text-center text-white bg-secondary">
+                        <tr class="text-center">
 
                             <th scope="col">
                                 <h5>Trail Name</h5>
@@ -192,14 +192,14 @@
 
     <div class="container">
 
-        <div class="card friendo mt-5 mb-5 text-white bg-secondary">
+        <div class="card friendo mt-5 mb-5 ">
             <div class="card-header">
                 <h2>Friends list</h2>
             </div>
             <div class="card-body cardtwo">
                 <table class="table">
                     <thead>
-                        <tr class="text-center text-white">
+                        <tr class="text-center">
 
                             <th scope="col">
                                 <h5>Name</h5>
@@ -411,12 +411,12 @@
 
             row.append(
 
-                $('<td>').text(Tdesti).addClass('text-white bg-secondary'),
-                $('<td>').text(Ttime).addClass('text-white bg-secondary'),
-                $('<td>').text(Tfreq).addClass('text-white bg-secondary'),
-                $('<td>').text(TfreqDos).addClass('text-white bg-secondary'),
-                $('<td>').text(timeTaken).addClass('text-white bg-secondary'),
-                $('<td>').text(speedDecimal).addClass('text-white bg-secondary'),
+                $('<td>').text(Tdesti),
+                $('<td>').text(Ttime),
+                $('<td>').text(Tfreq),
+                $('<td>').text(TfreqDos),
+                $('<td>').text(timeTaken),
+                $('<td>').text(speedDecimal),
 
                 $('<td>').html('<button class="bg-success sharebtn text-white">Share</button>')
 
@@ -431,7 +431,7 @@
                 a.preventDefault()
 
                 // console.log('Beta Mode: Korista does not have access to your friends list yet. Try again later!')
-                alert('I ran '+Ttime+ ' miles today at an avg. speed of ' + speedDecimal + ' mph' + '  ---- Beta Mode: not connect to friend list yet')
+                alert('I ran ' + Ttime + ' miles today at an avg. speed of ' + speedDecimal + ' mph' + '  ---- Beta Mode: not connect to friend list yet')
 
             })
 
